@@ -6,14 +6,13 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo Section */}
         <div className="flex items-center gap-3">
-          <div className="text-4xl font-black text-foreground tracking-tight">
-            <span className="text-foreground">w</span>
-            <span className="text-primary">e</span>
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-md">
+            <span className="text-xl font-black text-primary-foreground">ع</span>
           </div>
           <div className="h-8 w-px bg-muted-foreground/30"></div>
           <div className="text-right">
-            <p className="text-xs text-muted-foreground">متجر 3bdo</p>
-            <p className="text-[10px] text-muted-foreground/70">3bdo Store</p>
+            <p className="text-xs font-semibold text-foreground">متجر عبدو</p>
+            <p className="text-[10px] text-primary">للخدمات المالية</p>
           </div>
         </div>
 
