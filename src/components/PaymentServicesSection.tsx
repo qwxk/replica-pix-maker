@@ -4,11 +4,11 @@ import madarLogo from "@/assets/madar-logo.svg";
 
 const PaymentServicesSection = () => {
   const paymentMethods = [
-    { name: "لي باي", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden bg-white"><img src="https://lypay.gov.ly/wp-content/uploads/2025/06/ly-pay-logo.svg" alt="Ly Pay" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" /></div> },
-    { name: "ون باي", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden bg-white"><img src="https://masarat.ly/ms_uploads/2025/10/OnePay-Full-Logo.svg" alt="One Pay" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" /></div> },
-    { name: "كاش", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden"><img src="https://png.pngtree.com/png-clipart/20221228/original/pngtree-5-libyan-dinar-stack-pile-png-image_8816158.png" alt="Cash" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" /></div> },
-    { name: "ليبيانا", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden"><img src="https://images.seeklogo.com/logo-png/47/1/libyana-logo-png_seeklogo-478706.png" alt="Libyana" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" /></div> },
-    { name: "مدار", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden"><img src={madarLogo} alt="Madar" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" /></div> },
+    { name: "لي باي", icon: <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl flex items-center justify-center overflow-hidden bg-white p-2"><img src="https://lypay.gov.ly/wp-content/uploads/2025/06/ly-pay-logo.svg" alt="Ly Pay" className="w-full h-full object-contain" /></div> },
+    { name: "ون باي", icon: <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl flex items-center justify-center overflow-hidden bg-white p-2"><img src="https://masarat.ly/ms_uploads/2025/10/OnePay-Full-Logo.svg" alt="One Pay" className="w-full h-full object-contain" /></div> },
+    { name: "كاش", icon: <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl flex items-center justify-center overflow-hidden"><img src="https://png.pngtree.com/png-clipart/20221228/original/pngtree-5-libyan-dinar-stack-pile-png-image_8816158.png" alt="Cash" className="w-full h-full object-contain" /></div> },
+    { name: "ليبيانا", icon: <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl flex items-center justify-center overflow-hidden"><img src="https://images.seeklogo.com/logo-png/47/1/libyana-logo-png_seeklogo-478706.png" alt="Libyana" className="w-full h-full object-contain" /></div> },
+    { name: "مدار", icon: <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl flex items-center justify-center overflow-hidden"><img src={madarLogo} alt="Madar" className="w-full h-full object-contain" /></div> },
   ];
 
   return (
