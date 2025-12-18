@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // Brand SVG Icons
 const SnapchatLogo = () => (
-  <svg viewBox="0 0 512 512" className="w-12 h-12 sm:w-14 sm:h-14">
+  <svg viewBox="0 0 512 512" className="w-10 h-10 sm:w-12 sm:h-12">
     <path fill="#000" d="M256.5 16.7c47.7 0 83.4 14.3 106.2 42.5 18.2 22.5 27.1 54.3 27.1 97.2 0 15.8-1.4 32.8-4.1 50.6-.6 3.7-1.2 7.2-1.7 10.3 3.5 1.6 7.3 2.5 11.5 2.5 8.8 0 18.6-3.2 28.3-8.1 4.2-2.1 8.5-3.2 12.6-3.2 6.3 0 11.9 2.3 16.3 6.5 7.7 7.3 9.1 17.2 3.6 25.9-4.9 7.8-13.6 13.8-25.2 17.5-3.3 1.1-6.9 2.1-10.7 3.2-12.7 3.6-28.6 8.1-33.3 18.5-2.4 5.3-1.5 11.9 2.8 20.2l.5 1c14.3 27.2 33.6 50.3 57.4 68.6 14.4 11.1 31.5 20.4 50.8 27.6 7.8 2.9 12.6 8.9 13.3 16.3.7 8-3.2 15.8-10.7 21.2-14.7 10.6-38.6 18.2-73.2 23.4-1.4 3.1-2.9 8.5-4.1 12.8-1.5 5.3-3 10.8-5 16.1-2.9 7.7-8.1 11.5-15.8 11.5h-.9c-4.1-.1-8.5-.7-13.6-1.5-7.1-1.1-15.1-2.4-24.5-2.4-7.2 0-14.2.7-20.9 2-11.7 2.3-22 7.7-33.4 13.6-15.3 7.9-32.6 16.9-56.4 16.9h-1.3c-23.8 0-41.2-9-56.5-16.9-11.4-5.9-21.7-11.3-33.4-13.6-6.7-1.4-13.7-2-20.9-2-9.5 0-17.5 1.3-24.6 2.4-5 .8-9.5 1.5-13.5 1.5h-.9c-7.8 0-12.9-3.8-15.8-11.5-2-5.3-3.5-10.8-5-16.1-1.2-4.3-2.7-9.7-4.1-12.8-34.6-5.1-58.5-12.8-73.2-23.4-7.5-5.4-11.4-13.2-10.7-21.2.7-7.5 5.5-13.5 13.3-16.3 19.3-7.2 36.4-16.5 50.8-27.6 23.8-18.4 43.1-41.4 57.4-68.6l.5-1c4.3-8.3 5.2-14.9 2.8-20.2-4.7-10.4-20.6-14.9-33.3-18.5-3.8-1.1-7.4-2.1-10.7-3.2-11.6-3.7-20.3-9.7-25.2-17.5-5.5-8.7-4.1-18.6 3.6-25.9 4.4-4.2 10-6.5 16.3-6.5 4.1 0 8.4 1.1 12.6 3.2 9.7 4.9 19.5 8.1 28.3 8.1 4.2 0 8-.8 11.5-2.5-.5-3.1-1.1-6.6-1.7-10.3-2.7-17.8-4.1-34.8-4.1-50.6 0-42.9 8.9-74.7 27.1-97.2 22.8-28.2 58.5-42.5 106.2-42.5z"/>
   </svg>
 );
@@ -22,9 +22,7 @@ const ChatGPTLogo = () => (
 );
 
 const NetflixLogo = () => (
-  <svg viewBox="0 0 111 30" className="w-16 h-10 sm:w-20 sm:h-12" fill="#E50914">
-    <path d="M105.062 14.28L111 30c-1.75-.25-3.499-.563-5.28-.845l-3.345-8.686-3.437 7.969c-1.687-.282-3.344-.376-5.031-.595l6.031-13.75L94.468 0h5.063l3.062 7.874L105.875 0h5.124l-5.937 14.28zM90.47 0h-4.594v27.25c1.5.094 3.062.156 4.594.343V0zm-8.563 26.937c-4.187-.281-8.375-.53-12.656-.625V0h4.687v21.875c2.688.062 5.375.28 7.969.405v4.657zM64.25 10.657v4.687h-6.406V26H53.22V0h13.125v4.687h-8.5v5.97h6.406zm-18.906-5.97V26.25c-1.563 0-3.156 0-4.688.062V4.687H35.5V0h13.406v4.687h-3.562zM23.25 0v4.687h-6.406v20.688c-1.5.062-3.062.187-4.563.312V4.687H5.875V0h17.375zm-21.22 5.438C.88 5.876 0 7.378 0 8.814v10.469c0 1.405.719 2.75 1.875 3.312 1.407.687 2.938.406 4.407.218V18.5l-2.594.25V9.063l2.594.25V5.094c-1.469-.188-2.969-.344-4.25.344z" fill="white"/>
-  </svg>
+  <span className="text-3xl sm:text-4xl font-black text-[#E50914]" style={{ fontFamily: 'Arial Black, sans-serif' }}>N</span>
 );
 
 const TikTokLogo = () => (
@@ -40,33 +38,25 @@ const XboxLogo = () => (
 );
 
 const PUBGLogo = () => (
-  <div className="flex flex-col items-center">
-    <span className="text-2xl sm:text-3xl font-black text-white tracking-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>PUBG</span>
-    <span className="text-[10px] sm:text-xs text-yellow-100 font-semibold -mt-1">MOBILE</span>
-  </div>
+  <span className="text-xl sm:text-2xl font-black text-white tracking-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>PUBG</span>
 );
 
 const FreeFireLogo = () => (
-  <div className="flex flex-col items-center">
-    <span className="text-lg sm:text-xl font-black text-white tracking-tight">FREE</span>
-    <span className="text-lg sm:text-xl font-black text-orange-100 -mt-1">FIRE</span>
-  </div>
+  <span className="text-lg sm:text-xl font-black text-white tracking-tight">FF</span>
 );
 
 const MetaVerifyLogo = () => (
-  <div className="flex items-center gap-1">
-    <svg viewBox="0 0 24 24" className="w-6 h-6 sm:w-8 sm:h-8" fill="white">
-      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-    </svg>
-    <span className="text-base sm:text-lg font-bold text-white">توثيق</span>
-  </div>
+  <svg viewBox="0 0 24 24" className="w-10 h-10 sm:w-12 sm:h-12" fill="white">
+    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+  </svg>
 );
 
 interface CardData {
   id: string;
+  name: string;
+  nameAr: string;
   Logo: React.FC;
   gradient: string;
-  price?: string;
   shadowColor: string;
 }
 
@@ -91,7 +81,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
 
   return (
     <div 
-      className="animate-scale-in cursor-pointer"
+      className="animate-scale-in cursor-pointer flex flex-col items-center gap-2"
       style={{ 
         animationDelay: `${0.2 + index * 0.1}s`,
         perspective: '1000px'
@@ -124,16 +114,6 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
           }}
         />
         
-        {/* Price badge */}
-        {card.price && (
-          <div 
-            className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-black/40 backdrop-blur-md rounded-full px-2.5 py-1 border border-white/30"
-            style={{ transform: 'translateZ(20px)' }}
-          >
-            <span className="text-[10px] sm:text-xs font-bold text-white">{card.price}</span>
-          </div>
-        )}
-        
         {/* Logo */}
         <div 
           className="absolute inset-0 flex items-center justify-center"
@@ -145,21 +125,27 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
         {/* Bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/30 to-transparent" />
       </div>
+      
+      {/* Card Name */}
+      <div className="text-center">
+        <p className="text-sm sm:text-base font-bold text-foreground">{card.name}</p>
+        <p className="text-[10px] sm:text-xs text-muted-foreground">{card.nameAr}</p>
+      </div>
     </div>
   );
 };
 
 const HeroSection = () => {
   const cards: CardData[] = [
-    { id: "snapchat", Logo: SnapchatLogo, gradient: "from-[#FFFC00] via-[#FFE500] to-[#FFC800]", shadowColor: "rgba(255,252,0,0.4)" },
-    { id: "telegram", Logo: TelegramLogo, gradient: "from-[#2AABEE] via-[#229ED9] to-[#1E96C8]", shadowColor: "rgba(42,171,238,0.4)" },
-    { id: "chatgpt", Logo: ChatGPTLogo, gradient: "from-[#10A37F] via-[#0D9373] to-[#0A7D62]", shadowColor: "rgba(16,163,127,0.4)" },
-    { id: "netflix", Logo: NetflixLogo, gradient: "from-[#E50914] via-[#C4070F] to-[#8B0A0A]", shadowColor: "rgba(229,9,20,0.4)" },
-    { id: "tiktok", Logo: TikTokLogo, gradient: "from-[#010101] via-[#161823] to-[#000000]", shadowColor: "rgba(0,0,0,0.6)" },
-    { id: "xbox", Logo: XboxLogo, gradient: "from-[#107C10] via-[#0E6B0E] to-[#0A5A0A]", shadowColor: "rgba(16,124,16,0.4)" },
-    { id: "pubg", Logo: PUBGLogo, gradient: "from-[#F2A900] via-[#E09600] to-[#C77E00]", shadowColor: "rgba(242,169,0,0.4)" },
-    { id: "freefire", Logo: FreeFireLogo, gradient: "from-[#FF6B00] via-[#FF4500] to-[#CC3700]", shadowColor: "rgba(255,107,0,0.4)" },
-    { id: "verify", Logo: MetaVerifyLogo, gradient: "from-[#1877F2] via-[#0866FF] to-[#5B51D8]", shadowColor: "rgba(24,119,242,0.4)" },
+    { id: "snapchat", name: "Snapchat+", nameAr: "سناب شات بلس", Logo: SnapchatLogo, gradient: "from-[#FFFC00] via-[#FFE500] to-[#FFC800]", shadowColor: "rgba(255,252,0,0.4)" },
+    { id: "telegram", name: "Telegram Premium", nameAr: "تيليجرام مميز", Logo: TelegramLogo, gradient: "from-[#2AABEE] via-[#229ED9] to-[#1E96C8]", shadowColor: "rgba(42,171,238,0.4)" },
+    { id: "chatgpt", name: "ChatGPT Plus", nameAr: "شات جي بي تي بلس", Logo: ChatGPTLogo, gradient: "from-[#10A37F] via-[#0D9373] to-[#0A7D62]", shadowColor: "rgba(16,163,127,0.4)" },
+    { id: "netflix", name: "Netflix", nameAr: "نتفلكس", Logo: NetflixLogo, gradient: "from-[#E50914] via-[#C4070F] to-[#8B0A0A]", shadowColor: "rgba(229,9,20,0.4)" },
+    { id: "tiktok", name: "TikTok Coins", nameAr: "عملات تيك توك", Logo: TikTokLogo, gradient: "from-[#010101] via-[#161823] to-[#000000]", shadowColor: "rgba(0,0,0,0.6)" },
+    { id: "xbox", name: "Xbox Game Pass", nameAr: "اشتراك إكس بوكس", Logo: XboxLogo, gradient: "from-[#107C10] via-[#0E6B0E] to-[#0A5A0A]", shadowColor: "rgba(16,124,16,0.4)" },
+    { id: "pubg", name: "PUBG UC", nameAr: "شدات ببجي", Logo: PUBGLogo, gradient: "from-[#F2A900] via-[#E09600] to-[#C77E00]", shadowColor: "rgba(242,169,0,0.4)" },
+    { id: "freefire", name: "Free Fire", nameAr: "جواهر فري فاير", Logo: FreeFireLogo, gradient: "from-[#FF6B00] via-[#FF4500] to-[#CC3700]", shadowColor: "rgba(255,107,0,0.4)" },
+    { id: "verify", name: "Meta Verified", nameAr: "توثيق فيسبوك وانستا", Logo: MetaVerifyLogo, gradient: "from-[#1877F2] via-[#0866FF] to-[#5B51D8]", shadowColor: "rgba(24,119,242,0.4)" },
   ];
 
   return (
@@ -189,7 +175,7 @@ const HeroSection = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 justify-items-center mb-10 sm:mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 justify-items-center mb-10 sm:mb-12">
           {cards.map((card, index) => (
             <GiftCard key={card.id} card={card} index={index} />
           ))}
