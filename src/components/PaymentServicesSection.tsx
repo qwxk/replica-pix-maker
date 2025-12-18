@@ -1,5 +1,6 @@
-import { HelpCircle, Banknote } from "lucide-react";
+import { HelpCircle } from "lucide-react";
 import PaymentMethod from "./PaymentMethod";
+import madarLogo from "@/assets/madar-logo.svg";
 
 const PaymentServicesSection = () => {
   const paymentMethods = [
@@ -7,7 +8,7 @@ const PaymentServicesSection = () => {
     { name: "ون باي", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden bg-white"><img src="https://masarat.ly/ms_uploads/2025/10/OnePay-Full-Logo.svg" alt="One Pay" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" /></div> },
     { name: "كاش", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden"><img src="https://png.pngtree.com/png-clipart/20221228/original/pngtree-5-libyan-dinar-stack-pile-png-image_8816158.png" alt="Cash" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" /></div> },
     { name: "ليبيانا", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden"><img src="https://images.seeklogo.com/logo-png/47/1/libyana-logo-png_seeklogo-478706.png" alt="Libyana" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" /></div> },
-    { name: "مدار", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-400 to-teal-500 rounded-full flex items-center justify-center"><div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-white rounded-full" /></div> },
+    { name: "مدار", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden"><img src={madarLogo} alt="Madar" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" /></div> },
   ];
 
   return (
