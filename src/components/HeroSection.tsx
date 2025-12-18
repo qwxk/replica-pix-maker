@@ -42,14 +42,11 @@ const XboxLogo = () => (
 );
 
 const PUBGLogo = () => (
-  <div className="flex flex-col items-center">
-    <span className="text-xl sm:text-2xl font-black text-white tracking-tight" style={{ 
-      textShadow: '2px 2px 0 #F7B500, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000', 
-      fontFamily: 'Impact, sans-serif',
-      WebkitTextStroke: '1px #F7B500'
-    }}>PUBG</span>
-    <span className="text-[8px] sm:text-[10px] text-yellow-400 font-bold tracking-widest">MOBILE</span>
-  </div>
+  <img 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/PUBG_Corporation_Logo.svg/1024px-PUBG_Corporation_Logo.svg.png" 
+    alt="PUBG" 
+    className="w-20 h-12 sm:w-28 sm:h-16 object-contain drop-shadow-lg brightness-0 invert"
+  />
 );
 
 const FreeFireLogo = () => (
