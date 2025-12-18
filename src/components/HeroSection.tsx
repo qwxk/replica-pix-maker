@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute inset-0 gradient-overlay pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-muted/20 rounded-full blur-3xl animate-pulse-glow" />

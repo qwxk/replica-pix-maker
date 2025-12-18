@@ -16,7 +16,7 @@ const PaymentServicesSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 overflow-hidden">
+    <section className="relative flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute inset-0 gradient-overlay pointer-events-none" />
       <div className="absolute top-10 sm:top-20 right-5 sm:right-10 w-40 sm:w-64 h-40 sm:h-64 bg-muted/20 rounded-full blur-3xl animate-pulse-glow" />
