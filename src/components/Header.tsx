@@ -4,9 +4,9 @@ const Header = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-center">
         {/* Logo Section */}
         <div className="flex items-center gap-4">
-          <div className="text-5xl sm:text-6xl font-black text-foreground tracking-tight">
-            <span className="text-foreground">w</span>
-            <span className="text-primary">e</span>
+          <div className="text-4xl sm:text-5xl font-black tracking-tight">
+            <span className="text-foreground">3</span>
+            <span className="text-primary">bdo</span>
           </div>
           <div className="h-12 w-px bg-muted-foreground/40"></div>
           <div className="text-right">

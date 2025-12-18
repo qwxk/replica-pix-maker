@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo Section */}
         <div className="flex items-center gap-3">
-          <div className="text-4xl font-black text-foreground tracking-tight">
-            <span className="text-foreground">w</span>
-            <span className="text-primary">e</span>
+          <div className="text-3xl font-black tracking-tight">
+            <span className="text-foreground">3</span>
+            <span className="text-primary">bdo</span>
           </div>
           <div className="h-8 w-px bg-muted-foreground/30"></div>
           <div className="text-right">
