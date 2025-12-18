@@ -136,7 +136,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div 
-        className={`relative w-36 h-24 sm:w-44 sm:h-28 md:w-48 md:h-32 rounded-2xl bg-gradient-to-br ${card.gradient} overflow-hidden transition-all duration-200`}
+        className={`relative w-32 h-20 sm:w-40 sm:h-26 md:w-44 md:h-28 lg:w-48 lg:h-32 rounded-xl sm:rounded-2xl bg-gradient-to-br ${card.gradient} overflow-hidden transition-all duration-200`}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) ${isHovered ? 'scale(1.08)' : 'scale(1)'}`,
           transformStyle: 'preserve-3d',
@@ -221,7 +221,7 @@ const HeroSection = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 justify-items-center mb-10 sm:mb-12">
+        <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 justify-items-center mb-8 sm:mb-10 md:mb-12">
           {cards.map((card, index) => (
             <GiftCard key={card.id} card={card} index={index} />
           ))}
