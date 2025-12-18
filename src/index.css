@@ -76,8 +76,11 @@
   .gradient-bg {
     background: linear-gradient(
       180deg,
-      hsl(var(--gradient-start)) 0%,
-      hsl(var(--gradient-end)) 100%
+      hsl(220 18% 28%) 0%,
+      hsl(220 20% 22%) 25%,
+      hsl(220 22% 18%) 50%,
+      hsl(220 25% 14%) 75%,
+      hsl(220 28% 10%) 100%
     );
   }
 
