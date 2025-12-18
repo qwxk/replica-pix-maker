@@ -236,14 +236,20 @@ const HeroSection = () => {
         </div>
 
         {/* CTA Button */}
-        <Button 
-          variant="cta"
-          size="lg"
-          className="animate-fade-in-up text-sm sm:text-base lg:text-lg px-6 sm:px-8"
-          style={{ animationDelay: '1.2s' }}
+        <a 
+          href="https://wa.me/218930657289?text=مرحبا، أريد الاستفسار عن الاشتراكات"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          ايش ترجا؟ اطلب توا
-        </Button>
+          <Button 
+            variant="cta"
+            size="lg"
+            className="animate-fade-in-up text-sm sm:text-base lg:text-lg px-6 sm:px-8"
+            style={{ animationDelay: '1.2s' }}
+          >
+            ايش ترجا؟ اطلب توا
+          </Button>
+        </a>
       </div>
     </section>
   );
