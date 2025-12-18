@@ -2,7 +2,7 @@ import { Instagram, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-6 px-4 md:px-8 mt-auto">
+    <footer className="w-full py-6 px-4 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo Section */}
         <div className="flex items-center gap-3">
