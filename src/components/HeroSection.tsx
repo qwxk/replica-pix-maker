@@ -151,15 +151,15 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
 
 const HeroSection = () => {
   const cards: CardData[] = [
-    { id: "snapchat", Logo: SnapchatLogo, gradient: "from-[#FFFC00] via-[#FFE500] to-[#FFC800]", price: "Plus", shadowColor: "rgba(255,252,0,0.4)" },
-    { id: "telegram", Logo: TelegramLogo, gradient: "from-[#2AABEE] via-[#229ED9] to-[#1E96C8]", price: "Premium", shadowColor: "rgba(42,171,238,0.4)" },
-    { id: "chatgpt", Logo: ChatGPTLogo, gradient: "from-[#10A37F] via-[#0D9373] to-[#0A7D62]", price: "$20", shadowColor: "rgba(16,163,127,0.4)" },
-    { id: "netflix", Logo: NetflixLogo, gradient: "from-[#E50914] via-[#C4070F] to-[#8B0A0A]", price: "$15", shadowColor: "rgba(229,9,20,0.4)" },
-    { id: "tiktok", Logo: TikTokLogo, gradient: "from-[#010101] via-[#161823] to-[#000000]", price: "Coins", shadowColor: "rgba(0,0,0,0.6)" },
-    { id: "xbox", Logo: XboxLogo, gradient: "from-[#107C10] via-[#0E6B0E] to-[#0A5A0A]", price: "$50", shadowColor: "rgba(16,124,16,0.4)" },
-    { id: "pubg", Logo: PUBGLogo, gradient: "from-[#F2A900] via-[#E09600] to-[#C77E00]", price: "660 UC", shadowColor: "rgba(242,169,0,0.4)" },
-    { id: "freefire", Logo: FreeFireLogo, gradient: "from-[#FF6B00] via-[#FF4500] to-[#CC3700]", price: "💎 500", shadowColor: "rgba(255,107,0,0.4)" },
-    { id: "verify", Logo: MetaVerifyLogo, gradient: "from-[#1877F2] via-[#0866FF] to-[#5B51D8]", price: "✓", shadowColor: "rgba(24,119,242,0.4)" },
+    { id: "snapchat", Logo: SnapchatLogo, gradient: "from-[#FFFC00] via-[#FFE500] to-[#FFC800]", shadowColor: "rgba(255,252,0,0.4)" },
+    { id: "telegram", Logo: TelegramLogo, gradient: "from-[#2AABEE] via-[#229ED9] to-[#1E96C8]", shadowColor: "rgba(42,171,238,0.4)" },
+    { id: "chatgpt", Logo: ChatGPTLogo, gradient: "from-[#10A37F] via-[#0D9373] to-[#0A7D62]", shadowColor: "rgba(16,163,127,0.4)" },
+    { id: "netflix", Logo: NetflixLogo, gradient: "from-[#E50914] via-[#C4070F] to-[#8B0A0A]", shadowColor: "rgba(229,9,20,0.4)" },
+    { id: "tiktok", Logo: TikTokLogo, gradient: "from-[#010101] via-[#161823] to-[#000000]", shadowColor: "rgba(0,0,0,0.6)" },
+    { id: "xbox", Logo: XboxLogo, gradient: "from-[#107C10] via-[#0E6B0E] to-[#0A5A0A]", shadowColor: "rgba(16,124,16,0.4)" },
+    { id: "pubg", Logo: PUBGLogo, gradient: "from-[#F2A900] via-[#E09600] to-[#C77E00]", shadowColor: "rgba(242,169,0,0.4)" },
+    { id: "freefire", Logo: FreeFireLogo, gradient: "from-[#FF6B00] via-[#FF4500] to-[#CC3700]", shadowColor: "rgba(255,107,0,0.4)" },
+    { id: "verify", Logo: MetaVerifyLogo, gradient: "from-[#1877F2] via-[#0866FF] to-[#5B51D8]", shadowColor: "rgba(24,119,242,0.4)" },
   ];
 
   return (
