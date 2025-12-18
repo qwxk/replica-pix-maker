@@ -4,7 +4,7 @@ import PaymentMethod from "./PaymentMethod";
 const PaymentServicesSection = () => {
   const paymentMethods = [
     { name: "لي باي", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden bg-white"><img src="https://lypay.gov.ly/wp-content/uploads/2025/06/ly-pay-logo.svg" alt="Ly Pay" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" /></div> },
-    { name: "ون باي", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center"><span className="text-white text-base sm:text-lg font-bold">1</span></div> },
+    { name: "ون باي", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center overflow-hidden bg-white"><img src="https://masarat.ly/ms_uploads/2025/10/OnePay-Full-Logo.svg" alt="One Pay" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" /></div> },
     { name: "كاش", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-300 to-green-500 rounded-lg flex items-center justify-center"><Banknote className="w-5 h-5 sm:w-6 sm:h-6 text-white" /></div> },
     { name: "ليبيانا", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center"><span className="text-white text-lg sm:text-xl font-bold">iy</span></div> },
     { name: "مدار", icon: <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-400 to-teal-500 rounded-full flex items-center justify-center"><div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-white rounded-full" /></div> },
