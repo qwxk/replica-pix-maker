@@ -10,8 +10,8 @@ const Header = () => {
           </div>
           <div className="h-12 w-px bg-muted-foreground/40"></div>
           <div className="text-right">
-            <p className="text-sm sm:text-base font-semibold text-foreground">متجر عبدو</p>
-            <p className="text-xs sm:text-sm text-muted-foreground">للخدمات المالية</p>
+            <p className="text-sm sm:text-base font-semibold text-foreground">متجر عبدو للخدمات المالية</p>
+            <p className="text-xs sm:text-sm text-muted-foreground">Abdo Financial Services</p>
           </div>
         </div>
       </div>
