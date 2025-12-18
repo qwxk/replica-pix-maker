@@ -242,7 +242,7 @@ const HeroSection = () => {
           className="animate-fade-in-up text-sm sm:text-base lg:text-lg px-6 sm:px-8"
           style={{ animationDelay: '1.2s' }}
         >
-          تسـوق الآن
+          ايش ترجا؟ اطلب توا
         </Button>
       </div>
     </section>
