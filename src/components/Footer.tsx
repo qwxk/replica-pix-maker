@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle } from "lucide-react";
+import { MessageCircle, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -19,17 +19,12 @@ const Footer = () => {
 
         {/* Contact Section */}
         <div className="flex flex-col items-end gap-2">
-          <a 
-            href="https://instagram.com/walter.elgaradi" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-          >
-            <span className="text-sm">@walter.elgaradi</span>
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center">
-              <Instagram size={18} className="text-white" />
+          <div className="flex items-center gap-2 text-foreground">
+            <span className="text-sm font-semibold">لأول مره في البيضاء وبـ أقل الأسعار</span>
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+              <MapPin size={18} className="text-white" />
             </div>
-          </a>
+          </div>
           <a 
             href="https://wa.me/218930657289" 
             target="_blank" 
