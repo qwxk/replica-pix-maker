@@ -22,8 +22,14 @@ const ChatGPTLogo = () => (
 );
 
 const NetflixLogo = () => (
-  <svg viewBox="0 0 111 30" className="w-16 h-12 sm:w-20 sm:h-14">
-    <path fill="#E50914" d="M105.062 14.28L111 30c-1.75-.25-3.499-.563-5.28-.845l-3.345-8.686-3.437 7.969c-1.687-.282-3.344-.376-5.031-.595l6.031-13.75L94.468 0h5.063l3.062 7.874L105.875 0h5.124l-5.937 14.28zM90.47 0h-4.594v27.25c1.5.094 3.062.156 4.594.343V0zm-8.563 26.937c-4.187-.281-8.375-.53-12.656-.625V0h4.687v21.875c2.688.062 5.375.28 7.969.405v4.657zM64.25 10.657v4.687h-6.406V26H53.22V0h13.125v4.687h-8.5v5.97h6.406zm-18.906-5.97V26.25c-1.563 0-3.156 0-4.688.062V4.687H35.5V0h13.406v4.687h-3.562zM23.25 0v4.687h-6.406v20.688c-1.5.062-3.062.187-4.563.312V4.687H5.875V0h17.375zm-21.22 5.438C.88 5.876 0 7.378 0 8.814v10.469c0 1.405.719 2.75 1.875 3.312 1.407.687 2.938.406 4.407.218V18.5l-2.594.25V9.063l2.594.25V5.094c-1.469-.188-2.969-.344-4.25.344z"/>
+  <svg viewBox="0 0 100 40" className="w-16 h-10 sm:w-20 sm:h-12">
+    <defs>
+      <linearGradient id="netflixGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#E50914"/>
+        <stop offset="100%" stopColor="#B20710"/>
+      </linearGradient>
+    </defs>
+    <text x="50" y="30" textAnchor="middle" fill="url(#netflixGrad)" fontSize="26" fontWeight="900" fontFamily="Arial Black, sans-serif">NETFLIX</text>
   </svg>
 );
 
@@ -40,31 +46,60 @@ const XboxLogo = () => (
 );
 
 const PUBGLogo = () => (
-  <div className="flex flex-col items-center">
-    <span className="text-2xl sm:text-3xl font-black text-white tracking-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)', fontFamily: 'Impact, sans-serif' }}>PUBG</span>
-    <span className="text-[8px] sm:text-[10px] text-yellow-200 font-bold tracking-widest">MOBILE</span>
-  </div>
+  <svg viewBox="0 0 100 60" className="w-16 h-12 sm:w-20 sm:h-14">
+    <defs>
+      <linearGradient id="pubgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#F2A900"/>
+        <stop offset="100%" stopColor="#FF6B00"/>
+      </linearGradient>
+    </defs>
+    <text x="50" y="35" textAnchor="middle" fill="url(#pubgGrad)" fontSize="28" fontWeight="900" fontFamily="Impact, sans-serif" stroke="#000" strokeWidth="1">PUBG</text>
+    <text x="50" y="52" textAnchor="middle" fill="#FFD700" fontSize="12" fontWeight="bold" letterSpacing="3">MOBILE</text>
+  </svg>
 );
 
 const FreeFireLogo = () => (
-  <div className="flex flex-col items-center">
-    <span className="text-xl sm:text-2xl font-black text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)', fontFamily: 'Impact, sans-serif' }}>FREE</span>
-    <span className="text-xl sm:text-2xl font-black text-orange-200 -mt-1" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)', fontFamily: 'Impact, sans-serif' }}>FIRE</span>
-  </div>
+  <svg viewBox="0 0 100 60" className="w-16 h-12 sm:w-20 sm:h-14">
+    <defs>
+      <linearGradient id="ffGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#FFD700"/>
+        <stop offset="50%" stopColor="#FF6B00"/>
+        <stop offset="100%" stopColor="#FF4500"/>
+      </linearGradient>
+    </defs>
+    <text x="50" y="28" textAnchor="middle" fill="url(#ffGrad)" fontSize="22" fontWeight="900" fontFamily="Impact, sans-serif" stroke="#000" strokeWidth="0.5">FREE</text>
+    <text x="50" y="50" textAnchor="middle" fill="url(#ffGrad)" fontSize="22" fontWeight="900" fontFamily="Impact, sans-serif" stroke="#000" strokeWidth="0.5">FIRE</text>
+    <polygon points="85,10 90,20 80,20" fill="#FF4500"/>
+    <polygon points="15,10 20,20 10,20" fill="#FF4500"/>
+  </svg>
 );
 
 const MetaVerifyLogo = () => (
-  <div className="flex items-center gap-2">
-    <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-10 sm:h-10" fill="white">
-      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-    </svg>
-    <div className="flex flex-col">
-      <svg viewBox="0 0 24 24" className="w-6 h-6" fill="white">
+  <div className="flex flex-col items-center gap-1">
+    <div className="flex items-center gap-1">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 sm:w-8 sm:h-8" fill="white">
         <path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/>
       </svg>
-      <svg viewBox="0 0 24 24" className="w-6 h-6" fill="white">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+      <svg viewBox="0 0 24 24" className="w-7 h-7 sm:w-8 sm:h-8">
+        <defs>
+          <linearGradient id="instaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#FFDC80"/>
+            <stop offset="25%" stopColor="#FCAF45"/>
+            <stop offset="50%" stopColor="#F77737"/>
+            <stop offset="75%" stopColor="#F56040"/>
+            <stop offset="100%" stopColor="#C13584"/>
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#instaGrad)"/>
+        <circle cx="12" cy="12" r="4" fill="none" stroke="white" strokeWidth="2"/>
+        <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
       </svg>
+    </div>
+    <div className="flex items-center gap-0.5">
+      <svg viewBox="0 0 24 24" className="w-5 h-5" fill="#1DA1F2">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+      </svg>
+      <span className="text-[10px] text-white font-bold">VERIFIED</span>
     </div>
   </div>
 );
