@@ -1,7 +1,6 @@
 import { Infinity, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import netflixLogo from "@/assets/netflix-logo.svg";
 
 // Real Brand SVG Logos
 const SnapchatLogo = () => (
@@ -23,7 +22,11 @@ const ChatGPTLogo = () => (
 );
 
 const NetflixLogo = () => (
-  <img src={netflixLogo} alt="Netflix" className="w-16 h-12 sm:w-20 sm:h-14 object-contain" />
+  <span className="text-2xl sm:text-3xl font-black tracking-tighter" style={{ 
+    color: '#E50914', 
+    fontFamily: 'Arial Black, sans-serif',
+    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+  }}>NETFLIX</span>
 );
 
 const TikTokLogo = () => (
@@ -39,19 +42,27 @@ const XboxLogo = () => (
 );
 
 const PUBGLogo = () => (
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/PUBG_Mobile_logo.png/320px-PUBG_Mobile_logo.png" 
-    alt="PUBG" 
-    className="w-16 h-12 sm:w-20 sm:h-14 object-contain"
-  />
+  <div className="flex flex-col items-center">
+    <span className="text-xl sm:text-2xl font-black text-white tracking-tight" style={{ 
+      textShadow: '2px 2px 0 #F7B500, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000', 
+      fontFamily: 'Impact, sans-serif',
+      WebkitTextStroke: '1px #F7B500'
+    }}>PUBG</span>
+    <span className="text-[8px] sm:text-[10px] text-yellow-400 font-bold tracking-widest">MOBILE</span>
+  </div>
 );
 
 const FreeFireLogo = () => (
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Garena_Free_Fire_logo.png/280px-Garena_Free_Fire_logo.png" 
-    alt="Free Fire" 
-    className="w-16 h-12 sm:w-20 sm:h-14 object-contain"
-  />
+  <div className="flex flex-col items-center">
+    <span className="text-lg sm:text-xl font-black" style={{ 
+      background: 'linear-gradient(180deg, #FFD700 0%, #FF6B00 50%, #FF4500 100%)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      textShadow: '0 0 10px rgba(255,107,0,0.5)',
+      fontFamily: 'Impact, sans-serif'
+    }}>FREE FIRE</span>
+    <span className="text-[8px] sm:text-[10px] text-orange-400 font-bold">🔥 GARENA</span>
+  </div>
 );
 
 const MetaVerifyLogo = () => (
