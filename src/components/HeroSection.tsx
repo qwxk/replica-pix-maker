@@ -22,11 +22,11 @@ const ChatGPTLogo = () => (
 );
 
 const NetflixLogo = () => (
-  <span className="text-2xl sm:text-3xl font-black tracking-tighter" style={{ 
-    color: '#E50914', 
-    fontFamily: 'Arial Black, sans-serif',
-    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-  }}>NETFLIX</span>
+  <img 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1597px-Netflix_2015_logo.svg.png" 
+    alt="Netflix" 
+    className="w-16 h-8 sm:w-20 sm:h-10 object-contain"
+  />
 );
 
 const TikTokLogo = () => (
