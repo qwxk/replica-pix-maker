@@ -25,7 +25,7 @@ const NetflixLogo = () => (
   <img 
     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1597px-Netflix_2015_logo.svg.png" 
     alt="Netflix" 
-    className="w-20 h-12 sm:w-28 sm:h-16 object-contain drop-shadow-lg"
+    className="w-20 h-12 sm:w-28 sm:h-16 object-contain drop-shadow-lg brightness-0 invert"
   />
 );
 
