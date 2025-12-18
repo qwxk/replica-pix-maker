@@ -26,12 +26,12 @@ const Footer = () => {
             </div>
           </div>
           <a 
-            href="https://wa.me/218930657289" 
+            href="https://wa.me/218928102731" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
           >
-            <span className="text-sm ltr" dir="ltr">+218 93-0657289</span>
+            <span className="text-sm ltr" dir="ltr">+218 92-8102731</span>
             <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
               <MessageCircle size={18} className="text-white" />
             </div>

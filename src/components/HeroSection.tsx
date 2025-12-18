@@ -237,7 +237,7 @@ const HeroSection = () => {
 
         {/* CTA Button */}
         <a 
-          href="https://wa.me/218930657289?text=مرحبا، أريد الاستفسار عن الاشتراكات"
+          href="https://wa.me/218928102731?text=مرحبا، أريد الاستفسار عن الاشتراكات"
           target="_blank"
           rel="noopener noreferrer"
         >
