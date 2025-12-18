@@ -50,16 +50,11 @@ const PUBGLogo = () => (
 );
 
 const FreeFireLogo = () => (
-  <div className="flex flex-col items-center">
-    <span className="text-lg sm:text-xl font-black" style={{ 
-      background: 'linear-gradient(180deg, #FFD700 0%, #FF6B00 50%, #FF4500 100%)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-      textShadow: '0 0 10px rgba(255,107,0,0.5)',
-      fontFamily: 'Impact, sans-serif'
-    }}>FREE FIRE</span>
-    <span className="text-[8px] sm:text-[10px] text-orange-400 font-bold">🔥 GARENA</span>
-  </div>
+  <img 
+    src="https://upload.wikimedia.org/wikipedia/en/thumb/3/38/Free_Fire_New_Logo.svg/330px-Free_Fire_New_Logo.svg.png" 
+    alt="Free Fire" 
+    className="w-20 h-12 sm:w-28 sm:h-16 object-contain drop-shadow-lg brightness-0 invert"
+  />
 );
 
 const MetaVerifyLogo = () => (
