@@ -12,8 +12,8 @@ const Footer = () => {
           </div>
           <div className="h-8 w-px bg-muted-foreground/30"></div>
           <div className="text-right">
-            <p className="text-xs text-muted-foreground">متجر والتـر القـراضي</p>
-            <p className="text-[10px] text-muted-foreground/70">Walter Elgaradi Store</p>
+            <p className="text-xs text-muted-foreground">متجر 3bdo</p>
+            <p className="text-[10px] text-muted-foreground/70">3bdo Store</p>
           </div>
         </div>
 
