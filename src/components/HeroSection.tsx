@@ -1,6 +1,7 @@
 import { Infinity, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import netflixLogo from "@/assets/netflix-logo.svg";
 
 // Real Brand SVG Logos
 const SnapchatLogo = () => (
@@ -22,9 +23,7 @@ const ChatGPTLogo = () => (
 );
 
 const NetflixLogo = () => (
-  <svg viewBox="0 0 111 30" className="w-16 h-12 sm:w-20 sm:h-14">
-    <path fill="#E50914" d="M105.062 14.28L111 30c-1.75-.25-3.499-.563-5.28-.845l-3.345-8.686-3.437 7.969c-1.687-.282-3.344-.376-5.031-.595l6.031-13.75L94.468 0h5.063l3.062 7.874L105.875 0h5.124l-5.937 14.28zM90.47 0h-4.594v27.25c1.5.094 3.062.156 4.594.343V0zm-8.563 26.937c-4.187-.281-8.375-.53-12.656-.625V0h4.687v21.875c2.688.062 5.375.28 7.969.405v4.657zM64.25 10.657v4.687h-6.406V26H53.22V0h13.125v4.687h-8.5v5.97h6.406zm-18.906-5.97V26.25c-1.563 0-3.156 0-4.688.062V4.687H35.5V0h13.406v4.687h-3.562zM23.25 0v4.687h-6.406v20.688c-1.5.062-3.062.187-4.563.312V4.687H5.875V0h17.375zM5.28 5.438c-.875.438-1.656 1.503-1.656 2.5v10.469c0 1.405.656 2.375 1.75 2.937 1.219.625 2.875.407 4.282.25V17.5l-2.469.25V8.25l2.469.25V4.687c-1.469-.187-3-.406-4.375.75z"/>
-  </svg>
+  <img src={netflixLogo} alt="Netflix" className="w-16 h-12 sm:w-20 sm:h-14 object-contain" />
 );
 
 const TikTokLogo = () => (
@@ -40,32 +39,19 @@ const XboxLogo = () => (
 );
 
 const PUBGLogo = () => (
-  <svg viewBox="0 0 512 512" className="w-14 h-14 sm:w-16 sm:h-16">
-    <path fill="#F7B500" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0z"/>
-    <path fill="#1A1A1A" d="M180 150h60c30 0 50 20 50 45s-20 45-50 45h-30v60h-30V150zm30 65h25c15 0 25-8 25-20s-10-20-25-20h-25v40z"/>
-    <path fill="#1A1A1A" d="M300 150h30v100c0 30 15 45 35 45s35-15 35-45V150h30v105c0 45-30 70-65 70s-65-25-65-70V150z"/>
-    <path fill="#1A1A1A" d="M130 280h60c25 0 45 15 45 40 0 18-10 32-28 38l35 42h-38l-30-38h-14v38h-30v-120zm30 60h25c12 0 20-6 20-18s-8-17-20-17h-25v35z"/>
-    <path fill="#1A1A1A" d="M250 280h85v25h-55v22h50v25h-50v23h57v25h-87v-120z"/>
-    <circle cx="400" cy="120" r="35" fill="#F7B500" stroke="#1A1A1A" strokeWidth="8"/>
-    <path fill="#1A1A1A" d="M385 110h30v8h-11v22h-8v-22h-11z"/>
-  </svg>
+  <img 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/PUBG_Mobile_logo.png/320px-PUBG_Mobile_logo.png" 
+    alt="PUBG" 
+    className="w-16 h-12 sm:w-20 sm:h-14 object-contain"
+  />
 );
 
 const FreeFireLogo = () => (
-  <svg viewBox="0 0 512 512" className="w-14 h-14 sm:w-16 sm:h-16">
-    <defs>
-      <linearGradient id="ffFireGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-        <stop offset="0%" stopColor="#FF4500"/>
-        <stop offset="50%" stopColor="#FF6B00"/>
-        <stop offset="100%" stopColor="#FFD700"/>
-      </linearGradient>
-    </defs>
-    <circle cx="256" cy="256" r="240" fill="#1A1A1A"/>
-    <path fill="url(#ffFireGrad)" d="M256 80c-20 40-60 70-60 130 0 40 25 70 60 90 35-20 60-50 60-90 0-60-40-90-60-130z"/>
-    <path fill="#FF4500" d="M256 120c-15 30-40 50-40 95 0 30 18 50 40 65 22-15 40-35 40-65 0-45-25-65-40-95z"/>
-    <ellipse cx="256" cy="280" rx="15" ry="25" fill="#FFD700"/>
-    <text x="256" y="400" textAnchor="middle" fill="url(#ffFireGrad)" fontSize="70" fontWeight="900" fontFamily="Impact, sans-serif">FF</text>
-  </svg>
+  <img 
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Garena_Free_Fire_logo.png/280px-Garena_Free_Fire_logo.png" 
+    alt="Free Fire" 
+    className="w-16 h-12 sm:w-20 sm:h-14 object-contain"
+  />
 );
 
 const MetaVerifyLogo = () => (
