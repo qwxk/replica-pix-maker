@@ -223,7 +223,7 @@ const HeroSection = () => {
             <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
           <div className="flex items-center gap-2 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <span className="text-sm sm:text-base lg:text-lg">خيارات دفع متعددة وآمنة</span>
+            <span className="text-sm sm:text-base lg:text-lg">معندكش كاش؟ عادي ادفع خدمات</span>
             <CreditCard className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
         </div>
