@@ -213,7 +213,7 @@ const HeroSection = () => {
       <div className="relative z-10 text-center w-full max-w-5xl mx-auto">
         {/* Title */}
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-foreground tracking-wider mb-4 sm:mb-6 lg:mb-8 animate-fade-in-up">
-          GIFT CARDS
+          الاشتراكات
         </h1>
 
         {/* Features */}
