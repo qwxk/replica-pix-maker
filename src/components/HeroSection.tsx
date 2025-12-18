@@ -1,4 +1,4 @@
-import { Infinity, CreditCard } from "lucide-react";
+import { CheckCircle, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -219,8 +219,8 @@ const HeroSection = () => {
         {/* Features */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-8 mb-8 sm:mb-10 lg:mb-12">
           <div className="flex items-center gap-2 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <span className="text-sm sm:text-base lg:text-lg">تنوع كبير في البطاقات</span>
-            <Infinity className="w-5 h-5 sm:w-6 sm:h-6" />
+            <span className="text-sm sm:text-base lg:text-lg">كل حاجه موجوده</span>
+            <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
           <div className="flex items-center gap-2 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <span className="text-sm sm:text-base lg:text-lg">خيارات دفع متعددة وآمنة</span>
