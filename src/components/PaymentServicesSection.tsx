@@ -1,4 +1,4 @@
-import { Handshake, CreditCard, Banknote } from "lucide-react";
+import { HelpCircle, CreditCard, Banknote } from "lucide-react";
 import PaymentMethod from "./PaymentMethod";
 
 const PaymentServicesSection = () => {
@@ -22,13 +22,13 @@ const PaymentServicesSection = () => {
         {/* Icon */}
         <div className="flex justify-center mb-4 sm:mb-6 animate-fade-in-up">
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-muted/30 flex items-center justify-center">
-            <Handshake className="w-8 h-8 sm:w-10 sm:h-10 text-foreground" />
+            <HelpCircle className="w-8 h-8 sm:w-10 sm:h-10 text-foreground" />
           </div>
         </div>
 
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-8 sm:mb-10 lg:mb-12 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-          خدمات الدفع
+          ايش نقبلو؟
         </h2>
 
         {/* Payment Methods Grid */}
