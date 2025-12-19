@@ -170,3 +170,161 @@
 .animate-scale-in {
   animation: scaleIn 0.5s ease-out forwards;
 }
+
+/* Print styles for A4 Landscape */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  html {
+    direction: rtl;
+  }
+
+  body {
+    background: white !important;
+    color: #1a1a1a !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  /* Hide non-essential elements */
+  .no-print,
+  button,
+  nav a,
+  .floating-card,
+  .gradient-overlay,
+  .glow-effect {
+    display: none !important;
+  }
+
+  /* Reset backgrounds for printing */
+  .gradient-bg,
+  .bg-background {
+    background: white !important;
+  }
+
+  /* Header print styling */
+  header {
+    background: #f8f9fa !important;
+    border-bottom: 2px solid #333 !important;
+    padding: 15px !important;
+    margin-bottom: 20px !important;
+  }
+
+  header h1,
+  header span {
+    color: #1a1a1a !important;
+    -webkit-text-fill-color: #1a1a1a !important;
+  }
+
+  /* Main content print styling */
+  main,
+  section {
+    background: white !important;
+    page-break-inside: avoid;
+  }
+
+  /* Hero section print styling */
+  h1, h2, h3, h4, h5, h6 {
+    color: #1a1a1a !important;
+    -webkit-text-fill-color: #1a1a1a !important;
+    page-break-after: avoid;
+  }
+
+  p, span {
+    color: #333 !important;
+  }
+
+  /* Gift cards grid for print */
+  .grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 15px !important;
+    page-break-inside: avoid;
+  }
+
+  /* Gift card print styling */
+  [class*="GiftCard"],
+  .group {
+    width: 120px !important;
+    height: 75px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1) !important;
+    page-break-inside: avoid;
+    transform: none !important;
+  }
+
+  /* Payment services section */
+  .payment-services {
+    background: #f8f9fa !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Footer print styling */
+  footer {
+    background: #f0f0f0 !important;
+    border-top: 2px solid #333 !important;
+    padding: 15px !important;
+    margin-top: 20px !important;
+    page-break-inside: avoid;
+  }
+
+  footer * {
+    color: #333 !important;
+  }
+
+  /* Links styling for print */
+  a {
+    color: #0066cc !important;
+    text-decoration: none !important;
+  }
+
+  /* Images optimization */
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Remove animations */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Container adjustments for A4 landscape */
+  .container,
+  .max-w-7xl,
+  .max-w-6xl {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+
+  /* Flex adjustments */
+  .flex-col {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Text adjustments for clarity */
+  .text-xs { font-size: 10pt !important; }
+  .text-sm { font-size: 11pt !important; }
+  .text-base { font-size: 12pt !important; }
+  .text-lg { font-size: 14pt !important; }
+  .text-xl { font-size: 16pt !important; }
+  .text-2xl { font-size: 18pt !important; }
+  .text-3xl { font-size: 20pt !important; }
+  .text-4xl { font-size: 24pt !important; }
+}
