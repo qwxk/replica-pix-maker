@@ -171,11 +171,11 @@
   animation: scaleIn 0.5s ease-out forwards;
 }
 
-/* Print styles for A4 Landscape - Keeping Original Design */
+/* Print styles for A4 Landscape - Single Page */
 @media print {
   @page {
     size: A4 landscape;
-    margin: 8mm;
+    margin: 5mm;
   }
 
   * {
@@ -189,12 +189,14 @@
   }
 
   body {
-    font-size: 11pt;
-    line-height: 1.3;
+    font-size: 8pt;
+    line-height: 1.1;
   }
 
   /* Hide non-essential elements for print */
-  .no-print {
+  .no-print,
+  footer,
+  .floating-card {
     display: none !important;
   }
 
@@ -203,38 +205,46 @@
     background: linear-gradient(
       180deg,
       hsl(220 18% 28%) 0%,
-      hsl(220 20% 22%) 25%,
       hsl(220 22% 18%) 50%,
-      hsl(220 25% 14%) 75%,
       hsl(220 28% 10%) 100%
     ) !important;
+    min-height: auto !important;
+    height: auto !important;
   }
 
-  /* Header styling - keep original design */
+  .min-h-screen {
+    min-height: auto !important;
+  }
+
+  /* Header - ultra compact */
   header {
     background: hsl(220 15% 22% / 0.95) !important;
     backdrop-filter: none !important;
-    border-bottom: 1px solid hsl(220 10% 35%) !important;
-    padding: 12px 20px !important;
+    padding: 5px 10px !important;
   }
 
   header h1,
   header span {
     color: white !important;
     -webkit-text-fill-color: white !important;
+    font-size: 10pt !important;
   }
 
-  /* Main content keeps design */
+  /* Main content */
+  main {
+    padding: 5px !important;
+  }
+
   main,
   section {
     page-break-inside: avoid;
   }
 
-  /* Text colors - keep light on dark */
+  /* Text colors */
   h1, h2, h3, h4, h5, h6 {
     color: white !important;
     -webkit-text-fill-color: white !important;
-    page-break-after: avoid;
+    margin: 3px 0 !important;
   }
 
   .text-gradient {
@@ -245,58 +255,42 @@
 
   p, span {
     color: hsl(220 10% 85%) !important;
+    margin: 2px 0 !important;
   }
 
-  /* Gift cards - horizontal layout for A4 landscape */
+  /* Gift cards - compact grid */
   .grid {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    gap: 12px !important;
-    page-break-inside: avoid;
+    gap: 6px !important;
   }
 
-  /* Gift card styling - maintain premium look */
+  /* Gift card - smaller for single page */
   .group {
-    width: 110px !important;
-    height: 70px !important;
-    border-radius: 12px !important;
-    page-break-inside: avoid;
+    width: 75px !important;
+    height: 48px !important;
+    border-radius: 8px !important;
     transform: none !important;
     flex-shrink: 0;
   }
 
-  /* Keep card backgrounds and gradients */
   .group > div:first-child {
-    border-radius: 12px !important;
+    border-radius: 8px !important;
   }
 
-  /* Payment services section */
-  .payment-services,
+  /* Payment services - compact */
   section {
-    padding: 15px !important;
+    padding: 5px !important;
   }
 
-  /* Footer styling - keep dark theme */
-  footer {
-    background: hsl(220 15% 18%) !important;
-    border-top: 1px solid hsl(220 10% 30%) !important;
-    padding: 15px 20px !important;
-    margin-top: 15px !important;
-    page-break-inside: avoid;
-  }
-
-  footer * {
-    color: hsl(220 10% 75%) !important;
-  }
-
-  /* Images and SVGs */
+  /* Images and SVGs - smaller */
   img, svg {
-    max-width: 100% !important;
+    max-width: 60% !important;
     height: auto !important;
   }
 
-  /* Remove animations but keep transforms */
+  /* Remove animations */
   *,
   *::before,
   *::after {
@@ -304,66 +298,87 @@
     transition: none !important;
   }
 
-  /* Container adjustments for A4 landscape */
+  /* Container - full width */
   .container,
   .max-w-7xl,
   .max-w-6xl {
     max-width: 100% !important;
     width: 100% !important;
-    padding: 0 15px !important;
+    padding: 0 5px !important;
   }
 
-  /* Hero section horizontal layout */
-  .flex-col.md\\:flex-row {
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 20px !important;
+  /* Ultra compact spacing */
+  .py-4, .py-6, .py-8, .py-12, .py-16, .py-20 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
   }
 
-  /* Compact spacing for landscape */
-  .py-8, .py-12, .py-16, .py-20 {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
+  .px-4, .px-6, .px-8 {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
   }
 
-  .mb-8, .mb-12, .mb-16 {
-    margin-bottom: 12px !important;
+  .mb-4, .mb-6, .mb-8, .mb-12, .mb-16 {
+    margin-bottom: 5px !important;
   }
 
-  .gap-6, .gap-8 {
-    gap: 10px !important;
+  .mt-4, .mt-6, .mt-8, .mt-12 {
+    margin-top: 5px !important;
   }
 
-  /* Text sizes optimized for print */
-  .text-3xl, .text-4xl, .text-5xl {
-    font-size: 20pt !important;
-    line-height: 1.2 !important;
+  .gap-2, .gap-3, .gap-4, .gap-6, .gap-8 {
+    gap: 5px !important;
   }
 
-  .text-xl, .text-2xl {
+  .space-y-4 > * + *,
+  .space-y-6 > * + *,
+  .space-y-8 > * + * {
+    margin-top: 5px !important;
+  }
+
+  /* Text sizes - smaller for single page */
+  .text-4xl, .text-5xl, .text-6xl {
     font-size: 14pt !important;
+    line-height: 1.1 !important;
   }
 
-  .text-lg {
-    font-size: 12pt !important;
-  }
-
-  .text-base {
+  .text-2xl, .text-3xl {
     font-size: 11pt !important;
+    line-height: 1.1 !important;
   }
 
-  .text-sm, .text-xs {
+  .text-lg, .text-xl {
     font-size: 9pt !important;
   }
 
-  /* Hide decorative elements that don't print well */
-  .floating-card {
-    animation: none !important;
+  .text-base {
+    font-size: 8pt !important;
   }
 
-  /* Payment method icons */
+  .text-sm, .text-xs {
+    font-size: 7pt !important;
+  }
+
+  /* Payment icons - smaller */
   .icon-circle {
+    width: 28px !important;
+    height: 28px !important;
     background: white !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+  }
+
+  .icon-circle svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* Hero section layout */
+  .relative.z-10 {
+    padding: 5px !important;
+  }
+
+  /* Hide decorative shadows */
+  .card-shadow,
+  .glow-effect {
+    box-shadow: none !important;
   }
 }
