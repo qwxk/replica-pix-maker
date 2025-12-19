@@ -171,11 +171,11 @@
   animation: scaleIn 0.5s ease-out forwards;
 }
 
-/* Print styles for A4 Landscape - Single Page */
+/* Print styles for A4 Landscape - Single Page with Footer */
 @media print {
   @page {
     size: A4 landscape;
-    margin: 5mm;
+    margin: 6mm;
   }
 
   * {
@@ -189,13 +189,12 @@
   }
 
   body {
-    font-size: 8pt;
-    line-height: 1.1;
+    font-size: 10pt;
+    line-height: 1.2;
   }
 
-  /* Hide non-essential elements for print */
+  /* Hide only non-essential elements */
   .no-print,
-  footer,
   .floating-card {
     display: none !important;
   }
@@ -203,10 +202,10 @@
   /* Keep gradient background */
   .gradient-bg {
     background: linear-gradient(
-      180deg,
-      hsl(220 18% 28%) 0%,
+      135deg,
+      hsl(220 18% 25%) 0%,
       hsl(220 22% 18%) 50%,
-      hsl(220 28% 10%) 100%
+      hsl(220 28% 12%) 100%
     ) !important;
     min-height: auto !important;
     height: auto !important;
@@ -216,23 +215,30 @@
     min-height: auto !important;
   }
 
-  /* Header - ultra compact */
+  /* Header - compact but readable */
   header {
-    background: hsl(220 15% 22% / 0.95) !important;
+    background: hsl(220 15% 20%) !important;
     backdrop-filter: none !important;
-    padding: 5px 10px !important;
+    padding: 8px 15px !important;
+    border-bottom: 2px solid hsl(220 20% 40%) !important;
   }
 
-  header h1,
-  header span {
+  header h1 {
     color: white !important;
     -webkit-text-fill-color: white !important;
-    font-size: 10pt !important;
+    font-size: 14pt !important;
+    font-weight: 700 !important;
+  }
+
+  header span {
+    color: hsl(220 20% 80%) !important;
+    -webkit-text-fill-color: hsl(220 20% 80%) !important;
+    font-size: 9pt !important;
   }
 
   /* Main content */
   main {
-    padding: 5px !important;
+    padding: 8px !important;
   }
 
   main,
@@ -240,53 +246,60 @@
     page-break-inside: avoid;
   }
 
-  /* Text colors */
+  /* Text colors - high contrast */
   h1, h2, h3, h4, h5, h6 {
     color: white !important;
     -webkit-text-fill-color: white !important;
-    margin: 3px 0 !important;
+    margin: 4px 0 !important;
+    font-weight: 700 !important;
   }
 
   .text-gradient {
-    background: linear-gradient(180deg, white 0%, hsl(220 10% 85%) 100%) !important;
+    background: linear-gradient(180deg, white 0%, hsl(220 10% 90%) 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
   }
 
-  p, span {
-    color: hsl(220 10% 85%) !important;
-    margin: 2px 0 !important;
+  p {
+    color: hsl(220 10% 90%) !important;
+    margin: 3px 0 !important;
+    font-size: 10pt !important;
   }
 
-  /* Gift cards - compact grid */
+  span {
+    color: hsl(220 10% 85%) !important;
+  }
+
+  /* Gift cards - optimized grid */
   .grid {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    gap: 6px !important;
+    gap: 8px !important;
   }
 
-  /* Gift card - smaller for single page */
+  /* Gift card - balanced size */
   .group {
-    width: 75px !important;
-    height: 48px !important;
-    border-radius: 8px !important;
+    width: 90px !important;
+    height: 58px !important;
+    border-radius: 10px !important;
     transform: none !important;
     flex-shrink: 0;
+    border: 1px solid hsl(220 20% 40%) !important;
   }
 
   .group > div:first-child {
-    border-radius: 8px !important;
+    border-radius: 10px !important;
   }
 
-  /* Payment services - compact */
+  /* Payment services section */
   section {
-    padding: 5px !important;
+    padding: 8px !important;
   }
 
-  /* Images and SVGs - smaller */
+  /* Images and SVGs */
   img, svg {
-    max-width: 60% !important;
+    max-width: 70% !important;
     height: auto !important;
   }
 
@@ -304,81 +317,121 @@
   .max-w-6xl {
     max-width: 100% !important;
     width: 100% !important;
-    padding: 0 5px !important;
+    padding: 0 8px !important;
   }
 
-  /* Ultra compact spacing */
+  /* Compact spacing */
   .py-4, .py-6, .py-8, .py-12, .py-16, .py-20 {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
 
   .px-4, .px-6, .px-8 {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
   }
 
   .mb-4, .mb-6, .mb-8, .mb-12, .mb-16 {
-    margin-bottom: 5px !important;
+    margin-bottom: 6px !important;
   }
 
   .mt-4, .mt-6, .mt-8, .mt-12 {
-    margin-top: 5px !important;
+    margin-top: 6px !important;
   }
 
   .gap-2, .gap-3, .gap-4, .gap-6, .gap-8 {
-    gap: 5px !important;
+    gap: 6px !important;
   }
 
   .space-y-4 > * + *,
   .space-y-6 > * + *,
   .space-y-8 > * + * {
-    margin-top: 5px !important;
+    margin-top: 6px !important;
   }
 
-  /* Text sizes - smaller for single page */
+  /* Text sizes - clear and readable */
   .text-4xl, .text-5xl, .text-6xl {
-    font-size: 14pt !important;
-    line-height: 1.1 !important;
+    font-size: 16pt !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
   }
 
   .text-2xl, .text-3xl {
-    font-size: 11pt !important;
-    line-height: 1.1 !important;
+    font-size: 12pt !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
   }
 
   .text-lg, .text-xl {
-    font-size: 9pt !important;
+    font-size: 10pt !important;
+    font-weight: 600 !important;
   }
 
   .text-base {
+    font-size: 9pt !important;
+  }
+
+  .text-sm {
     font-size: 8pt !important;
   }
 
-  .text-sm, .text-xs {
+  .text-xs {
     font-size: 7pt !important;
   }
 
-  /* Payment icons - smaller */
+  /* Payment icons */
   .icon-circle {
-    width: 28px !important;
-    height: 28px !important;
+    width: 32px !important;
+    height: 32px !important;
     background: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
   }
 
   .icon-circle svg {
-    width: 14px !important;
-    height: 14px !important;
+    width: 16px !important;
+    height: 16px !important;
   }
 
   /* Hero section layout */
   .relative.z-10 {
-    padding: 5px !important;
+    padding: 8px !important;
+  }
+
+  /* Footer - compact and styled */
+  footer {
+    background: hsl(220 15% 15%) !important;
+    border-top: 2px solid hsl(220 20% 40%) !important;
+    padding: 10px 15px !important;
+    margin-top: 8px !important;
+  }
+
+  footer h3 {
+    font-size: 10pt !important;
+    font-weight: 700 !important;
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    margin-bottom: 4px !important;
+  }
+
+  footer p,
+  footer span,
+  footer a {
+    font-size: 8pt !important;
+    color: hsl(220 15% 75%) !important;
+  }
+
+  footer .grid {
+    gap: 15px !important;
   }
 
   /* Hide decorative shadows */
   .card-shadow,
   .glow-effect {
     box-shadow: none !important;
+  }
+
+  /* Price tags on cards */
+  .group .absolute {
+    font-size: 7pt !important;
   }
 }
