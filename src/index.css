@@ -171,11 +171,11 @@
   animation: scaleIn 0.5s ease-out forwards;
 }
 
-/* Print styles for A4 Landscape - Single Page with Footer */
+/* Print styles for A4 Landscape - 300 DPI High Quality (3508 × 2480 px) */
 @media print {
   @page {
-    size: A4 landscape;
-    margin: 6mm;
+    size: 297mm 210mm; /* A4 Landscape: Width × Height */
+    margin: 5mm;
   }
 
   * {
