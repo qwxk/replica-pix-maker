@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="w-full py-4 sm:py-6 px-3 sm:px-6 md:px-8 border-b border-border/30 bg-background/80 backdrop-blur-sm">
+    <header className="w-full py-4 sm:py-6 px-3 sm:px-6 md:px-8 border-b border-border/20">
       <div className="max-w-6xl mx-auto flex items-center justify-center">
         {/* Logo Section */}
         <div className="flex items-center gap-2 sm:gap-4">
