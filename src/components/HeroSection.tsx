@@ -103,6 +103,8 @@ interface CardData {
   Logo: React.FC;
   gradient: string;
   shadowColor: string;
+  badge?: string;
+  badgeType?: 'primary' | 'secondary' | 'accent' | 'success' | 'warning' | 'error';
 }
 
 const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
@@ -145,6 +147,15 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
             : `0 10px 30px -10px rgba(0,0,0,0.4)`
         }}
       >
+        {/* Badge */}
+        {card.badge && (
+          <div className="absolute top-0 right-0 z-10">
+            <span className={`badge badge-${card.badgeType || 'primary'} badge-xs text-[5px] sm:text-[6px] rounded-none rounded-bl-md`}>
+              {card.badge}
+            </span>
+          </div>
+        )}
+
         {/* Glossy overlay */}
         <div 
           className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-60 pointer-events-none"
@@ -176,13 +187,13 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
 
 const HeroSection = () => {
   const cards: CardData[] = [
-    { id: "snapchat", name: "Snapchat+", nameAr: "سناب شات بلس", Logo: SnapchatLogo, gradient: "from-[#FFFC00] via-[#FFE500] to-[#FFC800]", shadowColor: "rgba(255,252,0,0.4)" },
-    { id: "telegram", name: "Telegram Premium", nameAr: "تيليجرام مميز", Logo: TelegramLogo, gradient: "from-[#2AABEE] via-[#229ED9] to-[#1E96C8]", shadowColor: "rgba(42,171,238,0.4)" },
-    { id: "chatgpt", name: "ChatGPT Plus", nameAr: "شات جي بي تي بلس", Logo: ChatGPTLogo, gradient: "from-[#10A37F] via-[#0D9373] to-[#0A7D62]", shadowColor: "rgba(16,163,127,0.4)" },
+    { id: "snapchat", name: "Snapchat+", nameAr: "سناب شات بلس", Logo: SnapchatLogo, gradient: "from-[#FFFC00] via-[#FFE500] to-[#FFC800]", shadowColor: "rgba(255,252,0,0.4)", badge: "خصم 20%", badgeType: "error" },
+    { id: "telegram", name: "Telegram Premium", nameAr: "تيليجرام مميز", Logo: TelegramLogo, gradient: "from-[#2AABEE] via-[#229ED9] to-[#1E96C8]", shadowColor: "rgba(42,171,238,0.4)", badge: "الأكثر طلباً", badgeType: "warning" },
+    { id: "chatgpt", name: "ChatGPT Plus", nameAr: "شات جي بي تي بلس", Logo: ChatGPTLogo, gradient: "from-[#10A37F] via-[#0D9373] to-[#0A7D62]", shadowColor: "rgba(16,163,127,0.4)", badge: "جديد", badgeType: "success" },
     { id: "netflix", name: "Netflix", nameAr: "نتفلكس", Logo: NetflixLogo, gradient: "from-[#E50914] via-[#C4070F] to-[#8B0A0A]", shadowColor: "rgba(229,9,20,0.4)" },
-    { id: "tiktok", name: "TikTok Coins", nameAr: "عملات تيك توك", Logo: TikTokLogo, gradient: "from-[#010101] via-[#161823] to-[#000000]", shadowColor: "rgba(0,0,0,0.6)" },
+    { id: "tiktok", name: "TikTok Coins", nameAr: "عملات تيك توك", Logo: TikTokLogo, gradient: "from-[#010101] via-[#161823] to-[#000000]", shadowColor: "rgba(0,0,0,0.6)", badge: "عرض خاص", badgeType: "accent" },
     { id: "xbox", name: "Xbox Game Pass", nameAr: "اشتراك إكس بوكس", Logo: XboxLogo, gradient: "from-[#107C10] via-[#0E6B0E] to-[#0A5A0A]", shadowColor: "rgba(16,124,16,0.4)" },
-    { id: "pubg", name: "PUBG UC", nameAr: "شدات ببجي", Logo: PUBGLogo, gradient: "from-[#F2A900] via-[#E09600] to-[#C77E00]", shadowColor: "rgba(242,169,0,0.4)" },
+    { id: "pubg", name: "PUBG UC", nameAr: "شدات ببجي", Logo: PUBGLogo, gradient: "from-[#F2A900] via-[#E09600] to-[#C77E00]", shadowColor: "rgba(242,169,0,0.4)", badge: "خصم 15%", badgeType: "error" },
     { id: "freefire", name: "Free Fire", nameAr: "جواهر فري فاير", Logo: FreeFireLogo, gradient: "from-[#FF6B00] via-[#FF4500] to-[#CC3700]", shadowColor: "rgba(255,107,0,0.4)" },
     { id: "verify", name: "Meta Verified", nameAr: "توثيق فيسبوك وانستا", Logo: MetaVerifyLogo, gradient: "from-[#1877F2] via-[#0866FF] to-[#5B51D8]", shadowColor: "rgba(24,119,242,0.4)" },
     { id: "fbads", name: "Facebook Ads", nameAr: "اعلانات ممولة", Logo: FacebookAdsLogo, gradient: "from-[#1877F2] via-[#166FE5] to-[#0E5FCF]", shadowColor: "rgba(24,119,242,0.4)" },
