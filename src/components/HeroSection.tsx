@@ -1,6 +1,7 @@
-import { CheckCircle, CreditCard } from "lucide-react";
+import { CheckCircle, CreditCard, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import madarLogo from "@/assets/madar-logo.svg";
 
 // Real Brand SVG Logos
 const SnapchatLogo = () => (
@@ -194,8 +195,16 @@ const HeroSection = () => {
     { id: "fbads", name: "Facebook Ads", nameAr: "اعلانات ممولة", Logo: FacebookAdsLogo, gradient: "from-[#1877F2] via-[#166FE5] to-[#0E5FCF]", shadowColor: "rgba(24,119,242,0.4)" },
   ];
 
+  const paymentMethods = [
+    { name: "لي باي", logo: "https://lypay.gov.ly/wp-content/uploads/2025/06/ly-pay-logo.svg" },
+    { name: "ون باي", logo: "https://masarat.ly/ms_uploads/2025/10/OnePay-Full-Logo.svg" },
+    { name: "كاش", logo: "https://png.pngtree.com/png-clipart/20221228/original/pngtree-5-libyan-dinar-stack-pile-png-image_8816158.png" },
+    { name: "ليبيانا", logo: "https://images.seeklogo.com/logo-png/47/1/libyana-logo-png_seeklogo-478706.png" },
+    { name: "مدار", logo: madarLogo },
+  ];
+
   return (
-    <section className="relative flex-1 flex flex-col items-center justify-center px-3 sm:px-4 lg:px-6 py-4 sm:py-6 overflow-hidden">
+    <section className="relative flex-1 flex flex-col items-center justify-center px-3 sm:px-4 lg:px-6 py-2 sm:py-4 overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute inset-0 gradient-overlay pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-slate-500/10 rounded-full blur-3xl animate-pulse-glow" />
@@ -204,27 +213,49 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center w-full max-w-6xl mx-auto flex flex-col items-center">
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground tracking-wider mb-2 sm:mb-4 animate-fade-in-up">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-wider mb-1 sm:mb-2 animate-fade-in-up">
           الاشتراكات
         </h1>
 
         {/* Features */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 mb-4 sm:mb-6">
-          <div className="flex items-center gap-2 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <span className="text-xs sm:text-sm lg:text-base">كل حاجه موجوده</span>
-            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+        <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 mb-3 sm:mb-4">
+          <div className="flex items-center gap-1.5 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <span className="text-[10px] sm:text-xs lg:text-sm">كل حاجه موجوده</span>
+            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4" />
           </div>
-          <div className="flex items-center gap-2 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <span className="text-xs sm:text-sm lg:text-base">معندكش كاش؟ عادي ادفع خدمات</span>
-            <CreditCard className="w-4 h-4 sm:w-5 sm:h-5" />
+          <div className="flex items-center gap-1.5 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <span className="text-[10px] sm:text-xs lg:text-sm">معندكش كاش؟ عادي ادفع خدمات</span>
+            <CreditCard className="w-3 h-3 sm:w-4 sm:h-4" />
           </div>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-5 justify-items-center mb-4 sm:mb-6">
+        <div className="grid grid-cols-5 gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 justify-items-center mb-3 sm:mb-4">
           {cards.map((card, index) => (
             <GiftCard key={card.id} card={card} index={index} />
           ))}
+        </div>
+
+        {/* Payment Methods Section */}
+        <div className="w-full max-w-lg mb-3 sm:mb-4 animate-fade-in-up" style={{ animationDelay: '1s' }}>
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
+            <h2 className="text-sm sm:text-base md:text-lg font-bold text-foreground">ايش نقبلو؟</h2>
+          </div>
+          <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
+            {paymentMethods.map((method, index) => (
+              <div 
+                key={method.name}
+                className="flex flex-col items-center gap-1 animate-scale-in"
+                style={{ animationDelay: `${1.1 + index * 0.05}s` }}
+              >
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-white/90 flex items-center justify-center shadow-md hover:scale-110 transition-transform">
+                  <img src={method.logo} alt={method.name} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain" />
+                </div>
+                <span className="text-[8px] sm:text-[10px] text-muted-foreground">{method.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA Button */}
@@ -235,9 +266,9 @@ const HeroSection = () => {
         >
           <Button 
             variant="cta"
-            size="default"
-            className="animate-fade-in-up text-xs sm:text-sm lg:text-base px-4 sm:px-6"
-            style={{ animationDelay: '1.2s' }}
+            size="sm"
+            className="animate-fade-in-up text-[10px] sm:text-xs lg:text-sm px-3 sm:px-5"
+            style={{ animationDelay: '1.3s' }}
           >
             ايش ترجا؟ اطلب توا
           </Button>
