@@ -76,12 +76,11 @@
   .gradient-bg {
     background: linear-gradient(
       180deg,
-      hsl(220 18% 28%) 0%,
-      hsl(220 20% 22%) 25%,
-      hsl(220 22% 18%) 50%,
-      hsl(220 25% 14%) 75%,
-      hsl(220 28% 10%) 100%
+      hsl(220 20% 18%) 0%,
+      hsl(220 22% 14%) 50%,
+      hsl(220 25% 10%) 100%
     );
+    min-height: 100vh;
   }
 
   .gradient-overlay {

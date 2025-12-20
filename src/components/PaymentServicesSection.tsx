@@ -13,10 +13,6 @@ const PaymentServicesSection = () => {
 
   return (
     <section className="relative flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden">
-      {/* Background glow effects */}
-      <div className="absolute inset-0 gradient-overlay pointer-events-none" />
-      <div className="absolute top-10 sm:top-20 right-5 sm:right-10 w-40 sm:w-64 h-40 sm:h-64 bg-muted/20 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-10 sm:bottom-20 left-5 sm:left-10 w-48 sm:w-80 h-48 sm:h-80 bg-muted/15 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '-1.5s' }} />
 
       {/* Content */}
       <div className="relative z-10 text-center w-full max-w-4xl mx-auto">
