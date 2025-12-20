@@ -18,8 +18,10 @@ const PaymentServicesSection = () => {
       <div className="relative z-10 text-center w-full max-w-4xl mx-auto">
         {/* Icon */}
         <div className="flex justify-center mb-4 sm:mb-6 animate-fade-in-up">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-muted/30 flex items-center justify-center">
-            <HelpCircle className="w-8 h-8 sm:w-10 sm:h-10 text-foreground" />
+          <div className="avatar placeholder">
+            <div className="bg-base-300 text-foreground w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center">
+              <HelpCircle className="w-8 h-8 sm:w-10 sm:h-10" />
+            </div>
           </div>
         </div>
 
