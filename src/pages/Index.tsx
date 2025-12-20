@@ -8,6 +8,7 @@ function Index() {
   return (
     <PrintContextMenu>
       <div className="min-h-screen gradient-bg">
+        <div className="pattern-hex" />
         <Header />
         <main>
           <HeroSection />
