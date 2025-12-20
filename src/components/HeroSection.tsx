@@ -162,7 +162,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
         
         {/* Logo */}
         <div 
-          className="absolute inset-0 flex items-center justify-center scale-50 sm:scale-60 md:scale-75"
+          className="absolute inset-0 flex items-center justify-center scale-75 sm:scale-90 md:scale-100"
           style={{ transform: 'translateZ(15px)' }}
         >
           <card.Logo />
