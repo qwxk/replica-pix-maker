@@ -127,7 +127,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
 
   return (
     <div 
-      className="animate-scale-in cursor-pointer flex flex-col items-center gap-1 sm:gap-2"
+      className="animate-scale-in cursor-pointer flex flex-col items-center gap-0.5 sm:gap-1"
       style={{ 
         animationDelay: `${0.2 + index * 0.05}s`,
         perspective: '1000px'
@@ -137,7 +137,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div 
-        className={`relative w-24 h-14 sm:w-28 sm:h-16 md:w-32 md:h-20 lg:w-36 lg:h-22 rounded-lg sm:rounded-xl bg-gradient-to-br ${card.gradient} overflow-hidden transition-all duration-200`}
+        className={`relative w-16 h-10 sm:w-20 sm:h-12 md:w-24 md:h-14 lg:w-28 lg:h-16 rounded-md sm:rounded-lg bg-gradient-to-br ${card.gradient} overflow-hidden transition-all duration-200`}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) ${isHovered ? 'scale(1.08)' : 'scale(1)'}`,
           transformStyle: 'preserve-3d',
@@ -162,7 +162,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
         
         {/* Logo */}
         <div 
-          className="absolute inset-0 flex items-center justify-center scale-75 sm:scale-90"
+          className="absolute inset-0 flex items-center justify-center scale-50 sm:scale-60 md:scale-75"
           style={{ transform: 'translateZ(15px)' }}
         >
           <card.Logo />
@@ -174,8 +174,8 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       
       {/* Card Name */}
       <div className="text-center">
-        <p className="text-[10px] sm:text-xs md:text-sm font-bold text-foreground">{card.name}</p>
-        <p className="text-[8px] sm:text-[10px] text-muted-foreground">{card.nameAr}</p>
+        <p className="text-[8px] sm:text-[10px] md:text-xs font-bold text-foreground leading-tight">{card.name}</p>
+        <p className="text-[6px] sm:text-[8px] text-muted-foreground leading-tight">{card.nameAr}</p>
       </div>
     </div>
   );
@@ -230,7 +230,7 @@ const HeroSection = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-5 gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 justify-items-center mb-3 sm:mb-4">
+        <div className="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-5 justify-items-center mb-3 sm:mb-4 px-2">
           {cards.map((card, index) => (
             <GiftCard key={card.id} card={card} index={index} />
           ))}
