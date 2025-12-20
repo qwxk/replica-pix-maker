@@ -86,9 +86,9 @@ export default {
   },
   plugins: [require("tailwindcss-animate"), require("daisyui")],
   daisyui: {
-    themes: ["dark", "light", "synthwave", "cyberpunk"],
-    darkTheme: "dark",
-    base: false,
+    themes: ["cyberpunk", "dark", "light", "synthwave"],
+    darkTheme: "cyberpunk",
+    base: true,
     styled: true,
     utils: true,
   },
