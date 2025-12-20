@@ -2,7 +2,7 @@ import { MessageCircle, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-4 sm:py-6 px-3 sm:px-6 md:px-8 border-t border-border/20">
+    <footer className="w-full py-4 sm:py-6 px-3 sm:px-6 md:px-8 footer-glass">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-4 sm:gap-6 md:flex-row md:justify-between">
         {/* Logo Section */}
         <div className="flex items-center gap-2 sm:gap-3">
