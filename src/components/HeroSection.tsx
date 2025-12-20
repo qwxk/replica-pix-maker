@@ -126,9 +126,9 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
 
   return (
     <div 
-      className="animate-scale-in cursor-pointer flex flex-col items-center gap-3"
+      className="animate-scale-in cursor-pointer flex flex-col items-center gap-1 sm:gap-2"
       style={{ 
-        animationDelay: `${0.2 + index * 0.1}s`,
+        animationDelay: `${0.2 + index * 0.05}s`,
         perspective: '1000px'
       }}
       onMouseMove={handleMouseMove}
@@ -136,7 +136,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div 
-        className={`relative w-32 h-20 sm:w-40 sm:h-26 md:w-44 md:h-28 lg:w-48 lg:h-32 rounded-xl sm:rounded-2xl bg-gradient-to-br ${card.gradient} overflow-hidden transition-all duration-200`}
+        className={`relative w-24 h-14 sm:w-28 sm:h-16 md:w-32 md:h-20 lg:w-36 lg:h-22 rounded-lg sm:rounded-xl bg-gradient-to-br ${card.gradient} overflow-hidden transition-all duration-200`}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) ${isHovered ? 'scale(1.08)' : 'scale(1)'}`,
           transformStyle: 'preserve-3d',
@@ -161,7 +161,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
         
         {/* Logo */}
         <div 
-          className="absolute inset-0 flex items-center justify-center"
+          className="absolute inset-0 flex items-center justify-center scale-75 sm:scale-90"
           style={{ transform: 'translateZ(15px)' }}
         >
           <card.Logo />
@@ -173,8 +173,8 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       
       {/* Card Name */}
       <div className="text-center">
-        <p className="text-sm sm:text-base font-bold text-foreground">{card.name}</p>
-        <p className="text-[10px] sm:text-xs text-muted-foreground">{card.nameAr}</p>
+        <p className="text-[10px] sm:text-xs md:text-sm font-bold text-foreground">{card.name}</p>
+        <p className="text-[8px] sm:text-[10px] text-muted-foreground">{card.nameAr}</p>
       </div>
     </div>
   );
@@ -195,33 +195,33 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden">
+    <section className="relative flex-1 flex flex-col items-center justify-center px-3 sm:px-4 lg:px-6 py-4 sm:py-6 overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute inset-0 gradient-overlay pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-slate-500/10 rounded-full blur-3xl animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-40 sm:w-64 lg:w-80 h-40 sm:h-64 lg:h-80 bg-slate-400/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '-1.5s' }} />
 
       {/* Content */}
-      <div className="relative z-10 text-center w-full max-w-5xl mx-auto">
+      <div className="relative z-10 text-center w-full max-w-6xl mx-auto flex flex-col items-center">
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-foreground tracking-wider mb-4 sm:mb-6 lg:mb-8 animate-fade-in-up">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground tracking-wider mb-2 sm:mb-4 animate-fade-in-up">
           الاشتراكات
         </h1>
 
         {/* Features */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-8 mb-8 sm:mb-10 lg:mb-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 mb-4 sm:mb-6">
           <div className="flex items-center gap-2 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <span className="text-sm sm:text-base lg:text-lg">كل حاجه موجوده</span>
-            <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+            <span className="text-xs sm:text-sm lg:text-base">كل حاجه موجوده</span>
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
           <div className="flex items-center gap-2 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <span className="text-sm sm:text-base lg:text-lg">معندكش كاش؟ عادي ادفع خدمات</span>
-            <CreditCard className="w-5 h-5 sm:w-6 sm:h-6" />
+            <span className="text-xs sm:text-sm lg:text-base">معندكش كاش؟ عادي ادفع خدمات</span>
+            <CreditCard className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 justify-items-center mb-8 sm:mb-10 md:mb-12">
+        <div className="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-5 justify-items-center mb-4 sm:mb-6">
           {cards.map((card, index) => (
             <GiftCard key={card.id} card={card} index={index} />
           ))}
@@ -235,8 +235,8 @@ const HeroSection = () => {
         >
           <Button 
             variant="cta"
-            size="lg"
-            className="animate-fade-in-up text-sm sm:text-base lg:text-lg px-6 sm:px-8"
+            size="default"
+            className="animate-fade-in-up text-xs sm:text-sm lg:text-base px-4 sm:px-6"
             style={{ animationDelay: '1.2s' }}
           >
             ايش ترجا؟ اطلب توا

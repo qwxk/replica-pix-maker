@@ -7,12 +7,11 @@ import PrintContextMenu from "@/components/PrintContextMenu";
 function Index() {
   return (
     <PrintContextMenu>
-      <div className="min-h-screen gradient-bg">
+      <div className="h-screen overflow-hidden gradient-bg flex flex-col">
         <div className="pattern-hex" />
         <Header />
-        <main>
+        <main className="flex-1 overflow-hidden flex flex-col">
           <HeroSection />
-          <PaymentServicesSection />
         </main>
         <Footer />
       </div>
