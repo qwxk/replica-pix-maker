@@ -136,7 +136,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div 
-        className={`card card-compact w-16 sm:w-20 md:w-24 lg:w-32 xl:w-36 2xl:w-40 bg-gradient-to-br ${card.gradient} shadow-xl transition-all duration-200 overflow-hidden`}
+        className={`card card-compact w-20 h-24 bg-gradient-to-br ${card.gradient} shadow-xl transition-all duration-200 overflow-hidden`}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) ${isHovered ? 'scale(1.08)' : 'scale(1)'}`,
           transformStyle: 'preserve-3d',
@@ -159,15 +159,15 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
           }}
         />
 
-        <figure className="h-10 sm:h-12 md:h-14 lg:h-20 xl:h-24 2xl:h-28 flex items-center justify-center">
-          <div className="scale-[0.3] sm:scale-[0.35] md:scale-[0.4] lg:scale-[0.5] xl:scale-[0.6] 2xl:scale-[0.7]">
+        <figure className="h-14 flex items-center justify-center">
+          <div className="scale-[0.35]">
             <card.Logo />
           </div>
         </figure>
         
-        <div className="card-body p-1 sm:p-1.5 lg:p-2 xl:p-3 items-center text-center !gap-0">
-          <h3 className="text-[7px] sm:text-[8px] md:text-[10px] lg:text-xs xl:text-sm 2xl:text-base font-bold text-white leading-tight">{card.name}</h3>
-          <p className="text-[6px] sm:text-[7px] lg:text-[9px] xl:text-xs 2xl:text-sm text-white/70 leading-tight">{card.nameAr}</p>
+        <div className="card-body p-1.5 items-center text-center !gap-0">
+          <h3 className="text-[8px] font-bold text-white leading-tight">{card.name}</h3>
+          <p className="text-[7px] text-white/70 leading-tight">{card.nameAr}</p>
         </div>
       </div>
     </div>
@@ -223,7 +223,7 @@ const HeroSection = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10 justify-items-center mb-3 sm:mb-4 lg:mb-6 px-2">
+        <div className="grid grid-cols-5 gap-3 justify-items-center mb-4 px-2">
           {cards.map((card, index) => (
             <GiftCard key={card.id} card={card} index={index} />
           ))}
