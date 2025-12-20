@@ -7,7 +7,7 @@ interface PrintContextMenuProps {
   children: ReactNode;
 }
 
-const PrintContextMenu = ({ children }: PrintContextMenuProps) => {
+export default function PrintContextMenu({ children }: PrintContextMenuProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isExporting, setIsExporting] = useState(false);
@@ -34,13 +34,12 @@ const PrintContextMenu = ({ children }: PrintContextMenuProps) => {
     toast.info("جاري تصدير الصورة...");
     
     try {
-      const element = document.querySelector('.min-h-screen.gradient-bg') as HTMLElement;
+      const element = document.querySelector(".min-h-screen.gradient-bg") as HTMLElement;
       if (!element) {
         toast.error("خطأ في تصدير الصورة");
         return;
       }
 
-      // A4 Landscape at 300 DPI: 3508 × 2480 pixels
       const targetWidth = 3508;
       const targetHeight = 2480;
 
@@ -48,28 +47,25 @@ const PrintContextMenu = ({ children }: PrintContextMenuProps) => {
         scale: 3,
         useCORS: true,
         allowTaint: true,
-        backgroundColor: '#0a0a1a',
+        backgroundColor: "#0a0a1a",
         width: element.scrollWidth,
         height: element.scrollHeight,
         logging: false,
       });
 
-      // Create a new canvas with A4 landscape dimensions
-      const finalCanvas = document.createElement('canvas');
+      const finalCanvas = document.createElement("canvas");
       finalCanvas.width = targetWidth;
       finalCanvas.height = targetHeight;
-      const ctx = finalCanvas.getContext('2d');
+      const ctx = finalCanvas.getContext("2d");
       
       if (!ctx) {
         toast.error("خطأ في إنشاء الصورة");
         return;
       }
 
-      // Fill background
-      ctx.fillStyle = '#0a0a1a';
+      ctx.fillStyle = "#0a0a1a";
       ctx.fillRect(0, 0, targetWidth, targetHeight);
 
-      // Calculate scaling to fit content
       const scaleX = targetWidth / canvas.width;
       const scaleY = targetHeight / canvas.height;
       const scale = Math.min(scaleX, scaleY);
@@ -79,24 +75,22 @@ const PrintContextMenu = ({ children }: PrintContextMenuProps) => {
       const offsetX = (targetWidth - scaledWidth) / 2;
       const offsetY = (targetHeight - scaledHeight) / 2;
 
-      // Draw the captured content centered
       ctx.drawImage(canvas, offsetX, offsetY, scaledWidth, scaledHeight);
 
-      // Convert to blob and download
       finalCanvas.toBlob((blob) => {
         if (blob) {
           const url = URL.createObjectURL(blob);
-          const link = document.createElement('a');
-          link.download = 'madar-services-A4.png';
+          const link = document.createElement("a");
+          link.download = "madar-services-A4.png";
           link.href = url;
           link.click();
           URL.revokeObjectURL(url);
           toast.success("تم تصدير الصورة بنجاح!");
         }
-      }, 'image/png', 1.0);
+      }, "image/png", 1.0);
       
     } catch (error) {
-      console.error('Export error:', error);
+      console.error("Export error:", error);
       toast.error("حدث خطأ أثناء التصدير");
     } finally {
       setIsExporting(false);
@@ -117,7 +111,7 @@ const PrintContextMenu = ({ children }: PrintContextMenuProps) => {
           title: document.title,
           url: window.location.href,
         });
-      } catch (err) {
+      } catch {
         console.log("Share cancelled");
       }
     }
@@ -130,7 +124,7 @@ const PrintContextMenu = ({ children }: PrintContextMenuProps) => {
       {isExporting && (
         <div className="fixed inset-0 z-[100] bg-background/80 backdrop-blur-sm flex items-center justify-center no-print">
           <div className="bg-card p-6 rounded-xl shadow-2xl border border-border flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin" />
             <span className="text-foreground font-medium">جاري تصدير الصورة...</span>
           </div>
         </div>
@@ -219,6 +213,4 @@ const PrintContextMenu = ({ children }: PrintContextMenuProps) => {
       )}
     </div>
   );
-};
-
-export default PrintContextMenu;
+}
