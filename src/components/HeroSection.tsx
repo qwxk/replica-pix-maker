@@ -127,7 +127,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
 
   return (
     <div 
-      className="animate-scale-in cursor-pointer flex flex-col items-center gap-0.5 sm:gap-1"
+      className="animate-scale-in cursor-pointer"
       style={{ 
         animationDelay: `${0.2 + index * 0.05}s`,
         perspective: '1000px'
@@ -137,7 +137,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div 
-        className={`relative w-16 h-10 sm:w-20 sm:h-12 md:w-24 md:h-14 lg:w-28 lg:h-16 rounded-md sm:rounded-lg bg-gradient-to-br ${card.gradient} overflow-hidden transition-all duration-200`}
+        className={`card card-compact w-16 sm:w-20 md:w-24 lg:w-28 bg-gradient-to-br ${card.gradient} shadow-xl transition-all duration-200 overflow-hidden`}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) ${isHovered ? 'scale(1.08)' : 'scale(1)'}`,
           transformStyle: 'preserve-3d',
@@ -148,34 +148,28 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       >
         {/* Glossy overlay */}
         <div 
-          className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-60"
+          className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-60 pointer-events-none"
           style={{ transform: 'translateZ(1px)' }}
         />
         
         {/* Shine effect on hover */}
         <div 
-          className={`absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent transition-opacity duration-300 pointer-events-none ${isHovered ? 'opacity-100' : 'opacity-0'}`}
           style={{ 
             transform: `translateX(${tilt.y * 5}px) translateY(${tilt.x * 5}px) translateZ(2px)` 
           }}
         />
-        
-        {/* Logo */}
-        <div 
-          className="absolute inset-0 flex items-center justify-center scale-[0.3] sm:scale-[0.35] md:scale-[0.4]"
-          style={{ transform: 'translateZ(15px)' }}
-        >
-          <card.Logo />
-        </div>
 
-        {/* Bottom gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/30 to-transparent" />
-      </div>
-      
-      {/* Card Name */}
-      <div className="text-center">
-        <p className="text-[8px] sm:text-[10px] md:text-xs font-bold text-foreground leading-tight">{card.name}</p>
-        <p className="text-[6px] sm:text-[8px] text-muted-foreground leading-tight">{card.nameAr}</p>
+        <figure className="h-10 sm:h-12 md:h-14 lg:h-16 flex items-center justify-center">
+          <div className="scale-[0.3] sm:scale-[0.35] md:scale-[0.4]">
+            <card.Logo />
+          </div>
+        </figure>
+        
+        <div className="card-body p-1 sm:p-1.5 items-center text-center !gap-0">
+          <h3 className="text-[7px] sm:text-[8px] md:text-[10px] font-bold text-white leading-tight">{card.name}</h3>
+          <p className="text-[6px] sm:text-[7px] text-white/70 leading-tight">{card.nameAr}</p>
+        </div>
       </div>
     </div>
   );
