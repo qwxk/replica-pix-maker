@@ -4,7 +4,7 @@ import PaymentServicesSection from "@/components/PaymentServicesSection";
 import Footer from "@/components/Footer";
 import PrintContextMenu from "@/components/PrintContextMenu";
 
-const Index = () => {
+function Index() {
   return (
     <PrintContextMenu>
       <div className="min-h-screen gradient-bg">
@@ -17,6 +17,6 @@ const Index = () => {
       </div>
     </PrintContextMenu>
   );
-};
+}
 
 export default Index;
