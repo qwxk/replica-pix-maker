@@ -136,7 +136,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div 
-        className={`card card-compact w-20 h-24 md:w-24 md:h-28 lg:w-28 lg:h-32 xl:w-32 xl:h-36 bg-gradient-to-br ${card.gradient} shadow-xl transition-all duration-200 overflow-hidden`}
+        className={`card card-compact w-24 h-28 sm:w-28 sm:h-32 md:w-32 md:h-36 lg:w-40 lg:h-44 xl:w-44 xl:h-48 bg-gradient-to-br ${card.gradient} shadow-xl transition-all duration-200 overflow-hidden`}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) ${isHovered ? 'scale(1.08)' : 'scale(1)'}`,
           transformStyle: 'preserve-3d',
@@ -159,15 +159,15 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
           }}
         />
 
-        <figure className="h-14 md:h-16 lg:h-20 xl:h-24 flex items-center justify-center">
-          <div className="scale-[0.35] md:scale-[0.4] lg:scale-[0.45] xl:scale-[0.5]">
+        <figure className="h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 flex items-center justify-center">
+          <div className="scale-[0.4] sm:scale-[0.45] md:scale-[0.5] lg:scale-[0.6] xl:scale-[0.7]">
             <card.Logo />
           </div>
         </figure>
         
-        <div className="card-body p-1.5 md:p-2 lg:p-2.5 items-center text-center !gap-0">
-          <h3 className="text-[8px] md:text-[9px] lg:text-[10px] xl:text-xs font-bold text-white leading-tight">{card.name}</h3>
-          <p className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] text-white/70 leading-tight">{card.nameAr}</p>
+        <div className="card-body p-2 sm:p-2.5 md:p-3 items-center text-center !gap-0">
+          <h3 className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm xl:text-base font-bold text-white leading-tight">{card.name}</h3>
+          <p className="text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs xl:text-sm text-white/70 leading-tight">{card.nameAr}</p>
         </div>
       </div>
     </div>
@@ -204,48 +204,48 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-40 sm:w-64 lg:w-80 h-40 sm:h-64 lg:h-80 bg-slate-400/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '-1.5s' }} />
 
       {/* Content */}
-      <div className="relative z-10 text-center w-full max-w-6xl mx-auto flex flex-col items-center">
+      <div className="relative z-10 text-center w-full max-w-7xl mx-auto flex flex-col items-center">
         {/* Title */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-wider mb-1 sm:mb-2 animate-fade-in-up">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground tracking-wider mb-2 sm:mb-3 lg:mb-4 animate-fade-in-up">
           الاشتراكات
         </h1>
 
         {/* Features */}
-        <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 mb-3 sm:mb-4">
-          <div className="flex items-center gap-1.5 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <span className="text-[10px] sm:text-xs lg:text-sm">كل حاجه موجوده</span>
-            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4" />
+        <div className="flex flex-row items-center justify-center gap-4 sm:gap-8 lg:gap-12 mb-4 sm:mb-6 lg:mb-8">
+          <div className="flex items-center gap-2 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <span className="text-xs sm:text-sm md:text-base lg:text-lg">كل حاجه موجوده</span>
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
           </div>
-          <div className="flex items-center gap-1.5 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <span className="text-[10px] sm:text-xs lg:text-sm">معندكش كاش؟ عادي ادفع خدمات</span>
-            <CreditCard className="w-3 h-3 sm:w-4 sm:h-4" />
+          <div className="flex items-center gap-2 text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <span className="text-xs sm:text-sm md:text-base lg:text-lg">معندكش كاش؟ عادي ادفع خدمات</span>
+            <CreditCard className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
           </div>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-5 gap-3 md:gap-4 lg:gap-5 xl:gap-6 justify-items-center mb-4 px-2">
+        <div className="grid grid-cols-5 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 justify-items-center mb-6 sm:mb-8 lg:mb-10 px-2">
           {cards.map((card, index) => (
             <GiftCard key={card.id} card={card} index={index} />
           ))}
         </div>
 
         {/* Payment Methods Section */}
-        <div className="w-full max-w-lg mb-3 sm:mb-4 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
-            <h2 className="text-sm sm:text-base md:text-lg font-bold text-foreground">ايش نقبلو؟</h2>
+        <div className="w-full max-w-2xl mb-4 sm:mb-6 lg:mb-8 animate-fade-in-up" style={{ animationDelay: '1s' }}>
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-muted-foreground" />
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-foreground">ايش نقبلو؟</h2>
           </div>
-          <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {paymentMethods.map((method, index) => (
               <div 
                 key={method.name}
-                className="flex flex-col items-center gap-1 animate-scale-in"
+                className="flex flex-col items-center gap-1.5 sm:gap-2 animate-scale-in"
                 style={{ animationDelay: `${1.1 + index * 0.05}s` }}
               >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-white/90 flex items-center justify-center shadow-md hover:scale-110 transition-transform">
-                  <img src={method.logo} alt={method.name} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-xl bg-white/90 flex items-center justify-center shadow-md hover:scale-110 transition-transform">
+                  <img src={method.logo} alt={method.name} className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 object-contain" />
                 </div>
-                <span className="text-[8px] sm:text-[10px] text-muted-foreground">{method.name}</span>
+                <span className="text-[9px] sm:text-xs md:text-sm text-muted-foreground">{method.name}</span>
               </div>
             ))}
           </div>
@@ -259,8 +259,8 @@ const HeroSection = () => {
           className="animate-fade-in-up"
           style={{ animationDelay: '1.3s' }}
         >
-          <button className="btn btn-primary btn-sm sm:btn-md gap-2 text-[10px] sm:text-xs lg:text-sm shadow-lg hover:shadow-primary/50 transition-all">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+          <button className="btn btn-primary btn-md sm:btn-lg gap-2 sm:gap-3 text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-primary/50 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
             </svg>
             ايش ترجا؟ اطلب توا
