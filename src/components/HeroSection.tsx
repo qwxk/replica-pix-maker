@@ -136,7 +136,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div 
-        className={`card card-compact w-20 h-24 bg-gradient-to-br ${card.gradient} shadow-xl transition-all duration-200 overflow-hidden`}
+        className={`card card-compact w-20 h-24 md:w-24 md:h-28 lg:w-28 lg:h-32 xl:w-32 xl:h-36 bg-gradient-to-br ${card.gradient} shadow-xl transition-all duration-200 overflow-hidden`}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) ${isHovered ? 'scale(1.08)' : 'scale(1)'}`,
           transformStyle: 'preserve-3d',
@@ -159,15 +159,15 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
           }}
         />
 
-        <figure className="h-14 flex items-center justify-center">
-          <div className="scale-[0.35]">
+        <figure className="h-14 md:h-16 lg:h-20 xl:h-24 flex items-center justify-center">
+          <div className="scale-[0.35] md:scale-[0.4] lg:scale-[0.45] xl:scale-[0.5]">
             <card.Logo />
           </div>
         </figure>
         
-        <div className="card-body p-1.5 items-center text-center !gap-0">
-          <h3 className="text-[8px] font-bold text-white leading-tight">{card.name}</h3>
-          <p className="text-[7px] text-white/70 leading-tight">{card.nameAr}</p>
+        <div className="card-body p-1.5 md:p-2 lg:p-2.5 items-center text-center !gap-0">
+          <h3 className="text-[8px] md:text-[9px] lg:text-[10px] xl:text-xs font-bold text-white leading-tight">{card.name}</h3>
+          <p className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] text-white/70 leading-tight">{card.nameAr}</p>
         </div>
       </div>
     </div>
@@ -223,7 +223,7 @@ const HeroSection = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-5 gap-3 justify-items-center mb-4 px-2">
+        <div className="grid grid-cols-5 gap-3 md:gap-4 lg:gap-5 xl:gap-6 justify-items-center mb-4 px-2">
           {cards.map((card, index) => (
             <GiftCard key={card.id} card={card} index={index} />
           ))}
