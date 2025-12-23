@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,41 +7,56 @@
 
 @layer base {
   :root {
-    --background: 220 15% 20%;
-    --foreground: 0 0% 100%;
+    /* Material Dashboard 2 React Theme - Light Mode */
+    --background: 200 20% 98%;
+    --foreground: 200 25% 20%;
 
-    --card: 220 15% 25%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 200 25% 20%;
 
-    --popover: 220 15% 25%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 25% 20%;
 
-    --primary: 220 15% 85%;
-    --primary-foreground: 220 15% 10%;
+    /* Material Primary - Blue Gradient */
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 10% 30%;
+    /* Secondary - Pink/Magenta */
+    --secondary: 330 80% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 10% 35%;
-    --muted-foreground: 220 10% 70%;
+    /* Muted tones */
+    --muted: 200 15% 90%;
+    --muted-foreground: 200 15% 45%;
 
-    --accent: 220 15% 40%;
+    /* Accent - Teal/Cyan */
+    --accent: 180 60% 45%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 35%;
-    --input: 220 10% 35%;
-    --ring: 220 15% 60%;
+    --border: 200 15% 85%;
+    --input: 200 15% 85%;
+    --ring: 210 100% 50%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
-    /* Custom colors */
-    --gradient-start: 220 15% 25%;
-    --gradient-end: 220 20% 15%;
-    --glow-color: 220 20% 50%;
-    --card-glow: 0 0% 100%;
+    /* Material Dashboard Gradients */
+    --gradient-primary: linear-gradient(195deg, hsl(210 100% 55%), hsl(210 100% 40%));
+    --gradient-secondary: linear-gradient(195deg, hsl(330 80% 60%), hsl(330 80% 45%));
+    --gradient-success: linear-gradient(195deg, hsl(140 70% 45%), hsl(140 70% 35%));
+    --gradient-info: linear-gradient(195deg, hsl(200 90% 50%), hsl(200 90% 40%));
+    --gradient-warning: linear-gradient(195deg, hsl(40 95% 55%), hsl(40 95% 45%));
+    --gradient-dark: linear-gradient(195deg, hsl(220 30% 25%), hsl(220 30% 15%));
+
+    /* Material Shadows */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-primary: 0 14px 26px -12px hsla(210, 100%, 50%, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px hsla(210, 100%, 50%, 0.2);
+    --shadow-secondary: 0 14px 26px -12px hsla(330, 80%, 55%, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px hsla(330, 80%, 55%, 0.2);
 
     /* Gift card brand colors */
     --pubg-yellow: 45 100% 50%;
@@ -52,8 +68,35 @@
   }
 
   .dark {
-    --background: 220 15% 12%;
-    --foreground: 0 0% 100%;
+    --background: 220 25% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 25% 16%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 25% 16%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 80% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 22%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 180 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 210 100% 55%;
+
+    --gradient-dark: linear-gradient(195deg, hsl(220 30% 18%), hsl(220 30% 10%));
   }
 }
 
@@ -67,19 +110,19 @@
   }
 
   body {
-    @apply bg-background text-foreground font-cairo;
-    font-family: 'Cairo', sans-serif;
+    @apply bg-background text-foreground;
+    font-family: 'Roboto', 'Cairo', sans-serif;
   }
 }
 
 @layer utilities {
+  /* Material Dashboard Background */
   .gradient-bg {
     background: linear-gradient(
-      165deg,
-      hsl(220 30% 12%) 0%,
-      hsl(225 35% 8%) 30%,
-      hsl(230 40% 6%) 60%,
-      hsl(235 45% 4%) 100%
+      135deg,
+      hsl(220 25% 12%) 0%,
+      hsl(220 30% 8%) 50%,
+      hsl(225 35% 6%) 100%
     );
     min-height: 100vh;
     position: relative;
@@ -93,26 +136,113 @@
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(ellipse 80% 50% at 50% 0%, hsl(210 60% 25% / 0.2) 0%, transparent 50%),
-      radial-gradient(ellipse 60% 40% at 80% 100%, hsl(260 50% 20% / 0.15) 0%, transparent 40%),
-      radial-gradient(circle at 20% 50%, hsl(200 60% 15% / 0.1) 0%, transparent 30%);
+      radial-gradient(ellipse 100% 80% at 50% -20%, hsla(210, 100%, 50%, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 50% at 0% 50%, hsla(330, 80%, 55%, 0.05) 0%, transparent 40%),
+      radial-gradient(ellipse 80% 50% at 100% 50%, hsla(180, 60%, 45%, 0.05) 0%, transparent 40%);
     pointer-events: none;
   }
 
-  .gradient-bg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(circle at 25% 25%, hsl(220 50% 40% / 0.03) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, hsl(220 50% 40% / 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
+  /* Material Card Styles */
+  .material-card {
+    background: hsl(var(--card));
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsla(var(--border), 0.1);
   }
 
+  .material-card-gradient {
+    background: var(--gradient-dark);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Header Glass - Material Style */
+  .header-glass {
+    background: linear-gradient(
+      195deg,
+      hsla(220, 25%, 14%, 0.95),
+      hsla(220, 30%, 10%, 0.98)
+    );
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Footer Glass - Material Style */
+  .footer-glass {
+    background: linear-gradient(
+      195deg,
+      hsla(220, 25%, 10%, 0.98),
+      hsla(220, 30%, 6%, 0.99)
+    );
+    backdrop-filter: blur(30px);
+    box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  /* Material Buttons */
+  .btn-material-primary {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-primary);
+    transition: all 0.15s ease-in-out;
+  }
+
+  .btn-material-primary:hover {
+    box-shadow: 0 14px 26px -12px hsla(210, 100%, 50%, 0.55), 0 4px 23px 0 rgba(0, 0, 0, 0.15), 0 8px 10px -5px hsla(210, 100%, 50%, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .btn-material-secondary {
+    background: var(--gradient-secondary);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-secondary);
+    transition: all 0.15s ease-in-out;
+  }
+
+  .btn-material-secondary:hover {
+    box-shadow: 0 14px 26px -12px hsla(330, 80%, 55%, 0.55), 0 4px 23px 0 rgba(0, 0, 0, 0.15), 0 8px 10px -5px hsla(330, 80%, 55%, 0.3);
+    transform: translateY(-1px);
+  }
+
+  /* Material Text Gradient */
+  .text-gradient {
+    background: linear-gradient(195deg, hsl(0 0% 100%) 0%, hsl(220 10% 85%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-primary {
+    background: linear-gradient(195deg, hsl(210 100% 60%) 0%, hsl(210 100% 45%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Material Icon Styles */
+  .icon-material {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .icon-material-primary {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary);
+  }
+
+  .icon-material-secondary {
+    background: var(--gradient-secondary);
+    box-shadow: var(--shadow-secondary);
+  }
+
+  /* Pattern backgrounds */
   .pattern-grid {
     position: absolute;
     top: 0;
@@ -120,9 +250,9 @@
     right: 0;
     bottom: 0;
     background-image: 
-      linear-gradient(hsl(220 40% 30% / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(220 40% 30% / 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
+      linear-gradient(hsla(210, 100%, 50%, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(210, 100%, 50%, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
     pointer-events: none;
   }
 
@@ -132,105 +262,31 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle, hsl(220 50% 50% / 0.05) 1px, transparent 1px);
-    background-size: 30px 30px;
+    background-image: radial-gradient(circle, hsla(210, 100%, 50%, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
     pointer-events: none;
   }
 
-  .pattern-hex {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%234a5568' fill-opacity='0.03'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    pointer-events: none;
-    opacity: 0.5;
-  }
-
-  .header-glass {
-    background: linear-gradient(
-      180deg,
-      hsl(220 35% 15% / 0.95) 0%,
-      hsl(225 30% 12% / 0.9) 100%
-    );
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid hsl(220 40% 30% / 0.3);
-    box-shadow: 0 4px 30px hsl(220 50% 10% / 0.5);
-  }
-
-  .footer-glass {
-    background: linear-gradient(
-      180deg,
-      hsl(230 40% 8% / 0.95) 0%,
-      hsl(235 45% 5% / 0.98) 100%
-    );
-    backdrop-filter: blur(20px);
-    border-top: 1px solid hsl(220 40% 25% / 0.3);
-    box-shadow: 0 -4px 30px hsl(220 50% 5% / 0.5);
-  }
-
-  .gradient-overlay {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--glow-color) / 0.15) 0%,
-      transparent 50%,
-      hsl(var(--glow-color) / 0.1) 100%
-    );
-  }
-
-  .card-shadow {
-    box-shadow: 0 25px 50px -12px hsl(0 0% 0% / 0.5),
-                0 10px 20px -5px hsl(0 0% 0% / 0.3);
-  }
-
-  .glow-effect {
-    box-shadow: 0 0 60px hsl(var(--glow-color) / 0.2),
-                0 0 100px hsl(var(--glow-color) / 0.1);
-  }
-
-  .text-gradient {
-    background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 10% 80%) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .icon-circle {
-    @apply bg-white rounded-full flex items-center justify-center;
-    box-shadow: 0 4px 15px hsl(0 0% 0% / 0.1);
-  }
-
+  /* Floating card animation */
   .floating-card {
     animation: float 6s ease-in-out infinite;
   }
-
-  .floating-card-delay-1 {
-    animation-delay: -1s;
-  }
-
-  .floating-card-delay-2 {
-    animation-delay: -2s;
-  }
-
-  .floating-card-delay-3 {
-    animation-delay: -3s;
-  }
 }
 
+/* Keyframe animations */
 @keyframes float {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-10px) rotate(2deg);
+    transform: translateY(-10px) rotate(1deg);
   }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -241,7 +297,7 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   to {
     opacity: 1;
@@ -249,18 +305,33 @@
   }
 }
 
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.5s ease-out forwards;
+  animation: scaleIn 0.4s ease-out forwards;
 }
 
-/* Print styles for A4 Landscape - 300 DPI High Quality (3508 × 2480 px) */
+.animate-slide-in {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+/* Print styles */
 @media print {
   @page {
-    size: 297mm 210mm; /* A4 Landscape: Width × Height */
+    size: 297mm 210mm;
     margin: 5mm;
   }
 
@@ -279,245 +350,38 @@
     line-height: 1.2;
   }
 
-  /* Hide only non-essential elements */
   .no-print,
   .floating-card {
     display: none !important;
   }
 
-  /* Keep gradient background */
   .gradient-bg {
     background: linear-gradient(
       135deg,
-      hsl(220 18% 25%) 0%,
-      hsl(220 22% 18%) 50%,
-      hsl(220 28% 12%) 100%
+      hsl(220 25% 20%) 0%,
+      hsl(220 28% 15%) 100%
     ) !important;
     min-height: auto !important;
-    height: auto !important;
   }
 
   .min-h-screen {
     min-height: auto !important;
   }
 
-  /* Header - compact but readable */
   header {
-    background: hsl(220 15% 20%) !important;
-    backdrop-filter: none !important;
+    background: hsl(220 25% 16%) !important;
     padding: 8px 15px !important;
-    border-bottom: 2px solid hsl(220 20% 40%) !important;
   }
 
-  header h1 {
-    color: white !important;
-    -webkit-text-fill-color: white !important;
-    font-size: 14pt !important;
-    font-weight: 700 !important;
+  footer {
+    background: hsl(220 25% 12%) !important;
+    padding: 10px 15px !important;
   }
 
-  header span {
-    color: hsl(220 20% 80%) !important;
-    -webkit-text-fill-color: hsl(220 20% 80%) !important;
-    font-size: 9pt !important;
-  }
-
-  /* Main content */
-  main {
-    padding: 8px !important;
-  }
-
-  main,
-  section {
-    page-break-inside: avoid;
-  }
-
-  /* Text colors - high contrast */
-  h1, h2, h3, h4, h5, h6 {
-    color: white !important;
-    -webkit-text-fill-color: white !important;
-    margin: 4px 0 !important;
-    font-weight: 700 !important;
-  }
-
-  .text-gradient {
-    background: linear-gradient(180deg, white 0%, hsl(220 10% 90%) 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-  }
-
-  p {
-    color: hsl(220 10% 90%) !important;
-    margin: 3px 0 !important;
-    font-size: 10pt !important;
-  }
-
-  span {
-    color: hsl(220 10% 85%) !important;
-  }
-
-  /* Gift cards - optimized grid */
-  .grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 8px !important;
-  }
-
-  /* Gift card - balanced size */
-  .group {
-    width: 90px !important;
-    height: 58px !important;
-    border-radius: 10px !important;
-    transform: none !important;
-    flex-shrink: 0;
-    border: 1px solid hsl(220 20% 40%) !important;
-  }
-
-  .group > div:first-child {
-    border-radius: 10px !important;
-  }
-
-  /* Payment services section */
-  section {
-    padding: 8px !important;
-  }
-
-  /* Images and SVGs */
-  img, svg {
-    max-width: 70% !important;
-    height: auto !important;
-  }
-
-  /* Remove animations */
   *,
   *::before,
   *::after {
     animation: none !important;
     transition: none !important;
-  }
-
-  /* Container - full width */
-  .container,
-  .max-w-7xl,
-  .max-w-6xl {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 0 8px !important;
-  }
-
-  /* Compact spacing */
-  .py-4, .py-6, .py-8, .py-12, .py-16, .py-20 {
-    padding-top: 6px !important;
-    padding-bottom: 6px !important;
-  }
-
-  .px-4, .px-6, .px-8 {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-  }
-
-  .mb-4, .mb-6, .mb-8, .mb-12, .mb-16 {
-    margin-bottom: 6px !important;
-  }
-
-  .mt-4, .mt-6, .mt-8, .mt-12 {
-    margin-top: 6px !important;
-  }
-
-  .gap-2, .gap-3, .gap-4, .gap-6, .gap-8 {
-    gap: 6px !important;
-  }
-
-  .space-y-4 > * + *,
-  .space-y-6 > * + *,
-  .space-y-8 > * + * {
-    margin-top: 6px !important;
-  }
-
-  /* Text sizes - clear and readable */
-  .text-4xl, .text-5xl, .text-6xl {
-    font-size: 16pt !important;
-    line-height: 1.2 !important;
-    font-weight: 800 !important;
-  }
-
-  .text-2xl, .text-3xl {
-    font-size: 12pt !important;
-    line-height: 1.2 !important;
-    font-weight: 700 !important;
-  }
-
-  .text-lg, .text-xl {
-    font-size: 10pt !important;
-    font-weight: 600 !important;
-  }
-
-  .text-base {
-    font-size: 9pt !important;
-  }
-
-  .text-sm {
-    font-size: 8pt !important;
-  }
-
-  .text-xs {
-    font-size: 7pt !important;
-  }
-
-  /* Payment icons */
-  .icon-circle {
-    width: 32px !important;
-    height: 32px !important;
-    background: white !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
-  }
-
-  .icon-circle svg {
-    width: 16px !important;
-    height: 16px !important;
-  }
-
-  /* Hero section layout */
-  .relative.z-10 {
-    padding: 8px !important;
-  }
-
-  /* Footer - compact and styled */
-  footer {
-    background: hsl(220 15% 15%) !important;
-    border-top: 2px solid hsl(220 20% 40%) !important;
-    padding: 10px 15px !important;
-    margin-top: 8px !important;
-  }
-
-  footer h3 {
-    font-size: 10pt !important;
-    font-weight: 700 !important;
-    color: white !important;
-    -webkit-text-fill-color: white !important;
-    margin-bottom: 4px !important;
-  }
-
-  footer p,
-  footer span,
-  footer a {
-    font-size: 8pt !important;
-    color: hsl(220 15% 75%) !important;
-  }
-
-  footer .grid {
-    gap: 15px !important;
-  }
-
-  /* Hide decorative shadows */
-  .card-shadow,
-  .glow-effect {
-    box-shadow: none !important;
-  }
-
-  /* Price tags on cards */
-  .group .absolute {
-    font-size: 7pt !important;
   }
 }
