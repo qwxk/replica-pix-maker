@@ -136,7 +136,7 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div 
-        className={`card card-compact w-24 h-28 sm:w-28 sm:h-32 md:w-32 md:h-36 lg:w-40 lg:h-44 xl:w-44 xl:h-48 bg-gradient-to-br ${card.gradient} shadow-xl transition-all duration-200 overflow-hidden`}
+        className={`card card-compact w-full aspect-[3/4] bg-gradient-to-br ${card.gradient} shadow-xl transition-all duration-200 overflow-hidden`}
         style={{
           transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) ${isHovered ? 'scale(1.08)' : 'scale(1)'}`,
           transformStyle: 'preserve-3d',
@@ -159,15 +159,15 @@ const GiftCard = ({ card, index }: { card: CardData; index: number }) => {
           }}
         />
 
-        <figure className="h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 flex items-center justify-center">
-          <div className="scale-[0.4] sm:scale-[0.45] md:scale-[0.5] lg:scale-[0.6] xl:scale-[0.7]">
+        <figure className="flex-1 flex items-center justify-center">
+          <div className="scale-[0.5] sm:scale-[0.6] md:scale-[0.7] lg:scale-[0.8] xl:scale-[0.9]">
             <card.Logo />
           </div>
         </figure>
         
-        <div className="card-body p-2 sm:p-2.5 md:p-3 items-center text-center !gap-0">
-          <h3 className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm xl:text-base font-bold text-white leading-tight">{card.name}</h3>
-          <p className="text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs xl:text-sm text-white/70 leading-tight">{card.nameAr}</p>
+        <div className="card-body p-2 sm:p-3 md:p-4 items-center text-center !gap-0.5">
+          <h3 className="text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg font-bold text-white leading-tight">{card.name}</h3>
+          <p className="text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-base text-white/70 leading-tight">{card.nameAr}</p>
         </div>
       </div>
     </div>
@@ -197,14 +197,25 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative flex-1 flex flex-col items-center justify-center px-3 sm:px-4 lg:px-6 py-2 sm:py-4 overflow-hidden">
-      {/* Background glow effects */}
-      <div className="absolute inset-0 gradient-overlay pointer-events-none" />
-      <div className="absolute top-1/4 left-1/4 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-slate-500/10 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-40 sm:w-64 lg:w-80 h-40 sm:h-64 lg:h-80 bg-slate-400/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '-1.5s' }} />
+    <section className="relative flex-1 flex flex-col items-center justify-center px-0 py-2 sm:py-4 overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none" />
+      <div className="pattern-grid" />
+      <div className="pattern-dots" />
+      <div className="pattern-hex" />
+      
+      {/* Animated glow orbs */}
+      <div className="absolute top-1/4 left-1/4 w-64 sm:w-96 lg:w-[500px] h-64 sm:h-96 lg:h-[500px] bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-48 sm:w-80 lg:w-[400px] h-48 sm:h-80 lg:h-[400px] bg-gradient-to-br from-green-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '-1.5s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-white/5 via-transparent to-transparent pointer-events-none" />
+      
+      {/* Diagonal lines pattern */}
+      <div className="absolute inset-0 opacity-[0.02]" style={{
+        backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, hsl(var(--foreground)) 35px, hsl(var(--foreground)) 36px)`
+      }} />
 
       {/* Content */}
-      <div className="relative z-10 text-center w-full max-w-7xl mx-auto flex flex-col items-center">
+      <div className="relative z-10 text-center w-full flex flex-col items-center">
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground tracking-wider mb-2 sm:mb-3 lg:mb-4 animate-fade-in-up">
           الاشتراكات
@@ -222,11 +233,13 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-5 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 justify-items-center mb-6 sm:mb-8 lg:mb-10 px-2">
-          {cards.map((card, index) => (
-            <GiftCard key={card.id} card={card} index={index} />
-          ))}
+        {/* Cards Grid - Full Width */}
+        <div className="w-full px-2 sm:px-4 md:px-8 lg:px-12 xl:px-16 mb-6 sm:mb-8 lg:mb-10">
+          <div className="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 justify-items-center">
+            {cards.map((card, index) => (
+              <GiftCard key={card.id} card={card} index={index} />
+            ))}
+          </div>
         </div>
 
         {/* Payment Methods Section */}
